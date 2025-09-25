@@ -13,7 +13,7 @@
 - :dart: <b>Practical Objective --></b> Labs as instruced in video lectures.
 
 
----
+===
 
 ## 🗺️ Explore Map-2(Week-1):RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION
   <details>
