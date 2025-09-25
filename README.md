@@ -17,12 +17,12 @@
 
 ## 🗺️ Explore Map-2(Week-1):RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION
   <details>
-  <summary>:checkered_flag: Level-1(Day-0):Inauguration call and program overview </summary>
+  <summary>:checkered_flag: Level-1(Day-0):Introduction to Verilog RTL design and Synthesis </summary>
     
-  ##  :checkered_flag: Level-1(Day-0): Inauguration call and program overview
-  :rocket:The journey starts with the inauguration call on 📆 18<sup>th</sup> September,2025 ⏲️ from 8:00 pm to 9:00 pm.
+  ##  :checkered_flag: Level-1(Day-1): Introduction to Verilog RTL design and Synthesis
+  :rocket:In this level, I have learned the basic useage of simulation tools-`iverilog, gtkwave` and synthesis tool-`yosys` and standard cell library-`SKY130 PDK`.
   <br>
-  :walking: <b>[Explore Level-1 Gameplay](Map_1/Level_1/readme.md)</b>
+  :walking: <b>[Explore Level-1 Gameplay](Level_1/readme.md)</b>
   <br>
   :chart_with_upwards_trend: <b>Level-1 Status:</b> :white_check_mark: Completed
   </details>
