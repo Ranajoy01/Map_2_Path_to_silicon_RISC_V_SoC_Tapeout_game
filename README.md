@@ -1,4 +1,4 @@
-<mark># 🎮 Map 2(Week-1) :: Path to silicon RISC-V SoC Tapeout gameplay progress</mark>
+# <mark>🎮 Map 2(Week-1) :: Path to silicon RISC-V SoC Tapeout gameplay progress</mark>
 <div align="center">-------------------------------------------------------------------------</mark></div>
 <div align="center">:man_technologist:<b>Developer:</b><mark> VlSI SYSTEM DESIGN(VSD) Team</mark></div>
 <div align="center">:joystick:<b>Player-ID:</b><mark>Ranajoy Ghoshal</mark></div>
