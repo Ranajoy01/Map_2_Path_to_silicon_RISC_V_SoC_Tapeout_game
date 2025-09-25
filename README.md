@@ -1,1 +1,1 @@
-# Map_2_Path_to_silicon_RISC_V_SoC_Tapeout_game
+# Map 2(Week-1)::Path to silicon RISC-V SoC Tapeout gameplay progress
