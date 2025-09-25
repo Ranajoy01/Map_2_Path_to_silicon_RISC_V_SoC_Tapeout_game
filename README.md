@@ -26,6 +26,7 @@
   
   :chart_with_upwards_trend: <b>Level-1 Status:</b> :white_check_mark: Completed
   </details>
+  
   ---
   <details>
   <summary>:checkered_flag: Level-2(Day-1):System Check and SoC Design flow Lecture </summary>
@@ -37,6 +38,8 @@
   <br>
   :chart_with_upwards_trend: <b>Level-2 Status:</b> :white_check_mark: Completed
   </details>
+
+  ---
   <details>
   <summary>:checkered_flag: Level-3(Day-2):Tools Check </summary>
     
