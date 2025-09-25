@@ -21,7 +21,9 @@
     
   ##  :checkered_flag: Level-1(Day-1): Introduction to Verilog RTL design and Synthesis
   :rocket:In this level, I have learned the basic useage of simulation tools-`iverilog, gtkwave` and synthesis tool-`yosys` and standard cell library-`SKY130 PDK`.
- <div align="center"> :walking: <b>[Explore Level-1 Gameplay](Level_1/readme.md)</b></div>
+  
+  :walking: <b>[Explore Level-1 Gameplay](Level_1/readme.md)</b>
+  
   :chart_with_upwards_trend: <b>Level-1 Status:</b> :white_check_mark: Completed
   </details>
 
