@@ -6,8 +6,8 @@
 
 :rocket: Welcome to the <b>`Map-2(Week-1):RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION` </b> gameplay report of the <b> RISC-V SoC Tapeout EdTech Game </b> :video_game:.It is a 5 day journey and reported in a day by day manner.Each day is represented as level and there are some objectives in each level.Objectives are of two types
 
-- Learning Objective -> Summary of theory learned from video lectures.
-- Practical Objective -> Labs as instruced in video lectures.
+- :book: <b>Learning Objective</b> --> Summary of theory learned from video lectures.
+- :dart: <b>Practical Objective</b> --> Labs as instruced in video lectures.
 <details>
   <summary>🗺️ Map-1(Week-0):Introduction,Tool setup and RTL design</summary>
 
