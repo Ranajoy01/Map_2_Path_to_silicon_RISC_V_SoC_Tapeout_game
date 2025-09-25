@@ -8,8 +8,6 @@
 
 - :book: <b>Learning Objective --></b> Summary of theory learned from video lectures.
 - :dart: <b>Practical Objective --></b> Labs as instruced in video lectures.
-<details>
-  <summary>🗺️  Explore Map-2(Week-1):RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION</summary>
 
   ## 🗺️ Explore Map-2(Week-1):RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION
   <details>
@@ -44,4 +42,3 @@
   <br>
   :chart_with_upwards_trend: <b>Level-3 Status:</b> :white_check_mark: Completed
   </details>
-</details>
