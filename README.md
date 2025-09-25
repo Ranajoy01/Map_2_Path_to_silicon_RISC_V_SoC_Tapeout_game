@@ -9,9 +9,9 @@
 - :book: <b>Learning Objective --></b> Summary of theory learned from video lectures.
 - :dart: <b>Practical Objective --></b> Labs as instruced in video lectures.
 <details>
-  <summary>🗺️ Map-1(Week-0):Introduction,Tool setup and RTL design</summary>
+  <summary>🗺️  Explore Map-2(Week-1):RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION</summary>
 
-  ## 🗺️ Map-1(Week-0): Introduction,Tool setup and RTL design
+  ## 🗺️ Explore Map-2(Week-1):RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION
   <details>
   <summary>:checkered_flag: Level-1(Day-0):Inauguration call and program overview </summary>
     
