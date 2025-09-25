@@ -2,7 +2,7 @@
 <div align="center">:man_technologist:<b>Developer:</b><mark> VlSI SYSTEM DESIGN(VSD) Team</mark></div>
 <div align="center">:joystick:<b>Player-ID:</b><mark>Ranajoy Ghoshal</mark></div>
 
-:rocket: Welcome to the `<b>Map-2(Week-1):RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION </b>` gameplay report of the <b> RISC-V SoC Tapeout EdTech Game </b> :video_game:.Here I am reporting the 10 weeks journey of hardware-software low level interfacing.
+:rocket: Welcome to the <b>`Map-2(Week-1):RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION` </b> gameplay report of the <b> RISC-V SoC Tapeout EdTech Game </b> :video_game:.Here I am reporting the 10 weeks journey of hardware-software low level interfacing.
 <details>
   <summary>🗺️ Map-1(Week-0):Introduction,Tool setup and RTL design</summary>
 
