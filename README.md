@@ -1,4 +1,4 @@
-# <mark>🎮 Map 2(Week-1) :: Path to silicon RISC-V SoC Tapeout gameplay progress</mark>
+# 🎮 Map 2(Week-1) :: Path to silicon RISC-V SoC Tapeout gameplay progress
 <div align="center">-------------------------------------------------------------------------</mark></div>
 <div align="center">:man_technologist:<b>Developer:</b><mark> VlSI SYSTEM DESIGN(VSD) Team</mark></div>
 <div align="center">:joystick:<b>Player-ID:</b><mark>Ranajoy Ghoshal</mark></div>
@@ -11,6 +11,8 @@
 - :book: <b>Learning Objective --></b> Summary of theory learned from video lectures.
 - :dart: <b>Practical Objective --></b> Labs as instruced in video lectures.
 
+
+<div align="center">----------------------------------------------------------------------------------------------------------------------------------</mark></div>
 ## 🗺️ Explore Map-2(Week-1):RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION
   <details>
   <summary>:checkered_flag: Level-1(Day-0):Inauguration call and program overview </summary>
