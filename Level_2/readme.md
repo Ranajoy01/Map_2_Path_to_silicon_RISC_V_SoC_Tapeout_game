@@ -2,81 +2,46 @@
 
 ## List of Objectives
 
-- :book: <b>Learning Objective-1:</b> [Introduction to iverilog simulaor](#book-Introduction-to-iverilog-simulator)
-- :dart: <b>Practiccal Objective-1:</b> [Lab using iverilog and gtkwave](#dart-Lab-using-iverilog-and-gtkwave)
-   - :microscope: <b>Lab-1:</b> [Clone SKY130 open source process design kit(PDK) on Ubuntu VM as test file library](#microscope-lab-1-clone-sky130-open-source-process-design-kitpdk-on-ubuntu-vm-as-test-file-library)
-   - :microscope: <b>Lab-2:</b> [ Simulate a RTL design using iverilog](#microscope-lab-2-simulate-a-rtl-design-using-iverilog-test-design-21-mux-verilog-file-named-as-good_muxv)
-   - :microscope: <b>Lab-3:</b> [ Read and edit (editing process only) verilog file using text editor](#microscope-lab-3-read-and-edit-editing-process-only-verilog-file-using-text-editor-observe-the-verilog-code-syntax-for-test-design-21-mux-verilog-file-named-as-good_muxv)
-- :book: <b>Learning Objective-2:</b> [Introduction to Yosys and Logic synthesis](#book-Introduction-to-Yosys-and-Logic-synthesis)
-- :dart: <b>Practical Objective-2:</b> [Labs using Yosys and SKY130 PDK](#dart-lab-using-yosys-and-sky130-pdk)
-    - :microscope: <b>Lab-4:</b> [Synthesize a design using Yosys and SKY130 PDK (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))](#microscope-lab-4-synthesize-a-design-using-yosys-and-sky130-pdk-test-design-21-mux-verilog-file-named-as-good_muxv)
+- :dart: <b>Practiccal Objective-1:</b> [Lab for introduction to timing.lib]()
+   - :microscope: <b>Lab-1:</b> [Clone SKY130 open source process design kit(PDK) on Ubuntu VM as test file library]()
+   - :microscope: <b>Lab-2:</b> [ Simulate a RTL design using iverilog]()
+   - :microscope: <b>Lab-3:</b> [ Read and edit (editing process only) verilog file using text editor]()
+- :dart: <b>Practical Objective-3:</b> [Labs on Hierarchial and Flat synthesis)
+    - :microscope: <b>Lab-4:</b> [Synthesize a design using Yosys and SKY130 PDK (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))]()     
+- :book: <b>Learning Objective-1:</b> [Various flip-flop coding practices]()
+- :dart: <b>Practical Objective-3:</b> [Labs on flip-flop design,simulation,synthesis and optimization]()
+    - :microscope: <b>Lab-5:</b> [Synthesize a design using Yosys and SKY130 PDK (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))]()
 
  <div align="center">:star::star::star::star::star::star:</div> 
  
-## :book: Introduction to iverilog simulator
-
-### :bulb: Simulator
-   - RTL design is checked for matching with the specification by simulating the design.
-   - The tool used for `simulating the design` is known as `simulator`.
-   - `Icarus Verilog (iverilog)` is an example of simulator.
- 
----
-### :bulb: Design
-   - Design is the actual verilog code or set of verilog codes which has the intended functionality to meet with the required specification.
-   - Written in hardware description language (HDL) like Verilog.
-   - Functional verification is used to validate the RTL design.
----
-### :bulb: Testbench
-   - Testbench is the setup to apply stimulus `(test_vectors)` to the design to check its functionality.
-   - It is the integration the `Design`, `Stimulus generator`, `Stimulus observer`.
-   - `Stimulus generator` give `primary inputs` to the design under test (DUT).
-   - `Stimulus observer` take `primary outputs` from the design under test (DUT).
-   - Testbench has no primary inputs or outputs.
----
-### :bulb: How Simulator Works
-   - Simulator looks for the changes in input values.
-   - Output is evaluated based on the change of input `(if no change in input, no change in output)`.
-     
-     ![testbench_img](images/tb_rv.png)  
----
-### :bulb: Iverilog Based simulation flow
-   1. Design and testbench files are given to iverilog simulatior.
-   2. iverilog simulator generate .vcd file.
-   3. .vcd file is given to gtkwave.
-   4. gtkwave helps to visualize the input-output waveform (timing diagram).
-      
-   ![iverilog_flow](images/iv_sim_flow.png)
-
-  <div align="center">:star::star::star::star::star::star:</div> 
-
-## :dart: Lab using iverilog and gtkwave 
- ### :microscope: Lab-1: Clone SKY130 open source process design kit(PDK) on Ubuntu VM as test file library
+## :dart: Lab for introduction to timing.lib
+ ### :microscope: Lab-1: Open the library file , significance of the filename.
    
-   :zap: Open the Ubuntu terminal and clone the SKY130 PDK repository using the following command-
+   :zap: Open the `.lib` file using text editor-
      
    ```
-   $ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
-     
+   $ gvim sky130_fd_sc_hd__tt_025C_1v80.lib
    ```
-   :zap: Go to the Workshop directory cloned recently-
-   ```
-   $ cd sky130RTLDesignAndSynthesisWorkshop
-   ```
-   :zap: Here all test verilog files and standard cell libraries are available-
-   - Check test verilog files-
-   ```
-   $ cd verilog_files
-   $ ls
-   ```
-   ![test_verilog_files](images/ts_ver.png)
+   ![lib_vim_1](images/lib_vim_1.png)
    
-   - Check Standard cell library-
+   :zap: Go to the command line mode in gvim text editor by pressing `:` -
+
+   - Syntax off-
    ```
-   $ cd lib
-   $ ls
+    :syn off
    ```
-   ![standard_cell](images/std_cell.png)
+   - Line numbers-
+   ```
+    :se nu
+   ```
+   ![lib_vim_2](images/lib_vim_2.png)
    
+   :zap: Cell names can be seen using the following command-
+   ```
+   /cell+ space key
+   :g//
+   ```
+   ![lib_cell](images/lib_cell.png)
   ### :microscope: Lab-2: Simulate a RTL design using iverilog (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
   :zap: Go to verilog_files directory-
   ```
