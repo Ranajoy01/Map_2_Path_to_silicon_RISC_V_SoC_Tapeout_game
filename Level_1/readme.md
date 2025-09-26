@@ -195,4 +195,32 @@
     - More delay
     - Setup time violation
 ### :bulb: Selection of cells
-  - Guidance by the user in terms of `constraints` for selecting cells as per requirement. 
+  - Guidance by the user in terms of `constraints` for selecting cells as per requirement.
+
+## :dart: Lab using Yosys and SKY130 PDK 
+ ### :microscope: Lab-3: Synthesize a design using Yosys and SKY130 PDK (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
+   
+   :zap: Go to verilog_files directory-
+   ```
+   $ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
+   ```
+   :zap: Start yosys-
+   ```
+   $ yosys
+   ```
+   ![yosys][Level_1/images/yosys.png]
+   :zap: Here all test verilog files and standard cell libraries are available-
+   - Check test verilog files-
+   ```
+   $ cd verilog_files
+   $ ls
+   ```
+   ![test_verilog_files](Level_1/images/ts_ver.png)
+   
+   - Check Standard cell library-
+   ```
+   $ cd lib
+   $ ls
+   ```
+   ![standard_cell](Level_1/images/std_cell.png)
+   
