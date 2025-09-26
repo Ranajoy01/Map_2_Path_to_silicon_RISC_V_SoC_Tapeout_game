@@ -44,7 +44,7 @@
   <summary>:checkered_flag: <b>Level-3(Day-3):</b> Combinational and sequential optimization</summary>
   
   ##  :checkered_flag: Level-3(Day-3): Combinational and sequential optimization
-   :rocket:At this stage, I have gained the overview of SKY130 PDK library parameters and learned about two types of synthesis as well as different types of flip-flop designs.
+   :rocket:While completing this level, I learned diiferent optimization techniques for combinational and sequential logic (e.g. constant proparagation, sequential constant).
   
   :walking: <b>[Explore Level-3 Gameplay](Level_3/readme.md)</b>
   
@@ -56,7 +56,7 @@
   <summary>:checkered_flag: <b>Level-4(Day-4):</b> Gate level simulation,blocking vs non-blocking statement,synthesis-simulation mismatch </summary>
   
   ##  :checkered_flag: Level-4(Day-4): Gate level simulation,blocking vs non-blocking statement,synthesis-simulation mismatch
-   :rocket:During this level,I understood the importance of functional verification and GLS verification using netlist,application of various assignment statements in procedural always block and the significance     of synthesis-simulation mismatch(caveats and fix).
+   :rocket:During this level, I understood the importance of functional verification and GLS verification using netlist, application of various assignment statements in procedural always block and the significance of synthesis-simulation mismatch (caveats and fix).
   
   :walking: <b>[Explore Level-4 Gameplay](Level_4/readme.md)</b>
   
@@ -68,7 +68,7 @@
   <summary>:checkered_flag: <b>Level-5(Day-5):</b> Optimization in synthesis (If,case,for,generate useage in verilog) </summary>
   
   ##  :checkered_flag: Level-5(Day-5): Optimization in synthesis (If,case,for,generate useage in verilog) 
-   :rocket:At this stage, I have gained the overview of SKY130 PDK library parameters and learned about two types of synthesis as well as different types of flip-flop designs.
+   :rocket:This level taught me the useage of If,case,for and generate constructs in verilog and issues with various coding styles of these constructs. 
   
   :walking: <b>[Explore Level-5 Gameplay](Level_5/readme.md)</b>
   
