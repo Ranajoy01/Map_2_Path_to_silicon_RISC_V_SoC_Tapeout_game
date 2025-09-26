@@ -160,6 +160,6 @@
   
   - Combinational delay in logic path determines the maximum speed of digital logic circuit.
    ![fast_cell](Level_1/images/fast_cell_1.png)
-  - We need faster cells to make `T<sub>comb</sub>` small
+  - We need faster cells to make T<sub>comb</sub> small
 ---    
   
