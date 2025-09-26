@@ -4,7 +4,7 @@
 
 - :book: <b>Learning Objective-1:</b> Introduction to iverilog simulaor
 - :dart: <b>Practiccal Objective-1:</b> Lab using iverilog and gtkwave
-   - Lab-1:
-   - Lab-2:
+   - <b>Lab-1:</b>
+   - <b>Lab-2:</b>
 - :book: <b>Learning Objective-2:</b> Introduction to Yosys and Logic synthesis
-- :dart: <b>Practical Objective-1:</b> Labs using Yosys and SKY130 PDK
+- :dart: <b>Practical Objective-2:</b> Labs using Yosys and SKY130 PDK
