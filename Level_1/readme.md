@@ -33,13 +33,11 @@
 ### :bulb: How Simulator Works
    - Simulator looks for the changes in input values.
    - Output is evaluated based on the change of input `(if no change in input, no change in output)`.
-
-    ![testbench_img](Level_1/images/tb_rv.png)  
+     ![testbench_img](Level_1/images/tb_rv.png)  
 ---
 ### :bulb: Iverilog Based simulation flow
    1. Design and testbench files are given to iverilog simulatior.
    2. iverilog simulator generate .vcd file.
    3. .vcd file is given to gtkwave.
    4. gtkwave helps to visualize the input-output waveform (timing diagram).
-
    ![iverilog_flow](Level_1/images/iv_sim_flow.png)
