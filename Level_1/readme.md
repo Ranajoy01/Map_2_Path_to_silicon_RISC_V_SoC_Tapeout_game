@@ -5,7 +5,7 @@
 - :book: <b>Learning Objective-1:</b> [Introduction to iverilog simulaor](#book-Introduction-to-iverilog-simulator)
 - :dart: <b>Practiccal Objective-1:</b> [Lab using iverilog and gtkwave](#dart-Lab-using-iverilog-and-gtkwave)
    - :microscope: <b>Lab-1:</b> [Clone SKY130 open source process design kit(PDK) on Ubuntu VM as test file library](#microscope-lab-1-clone-sky130-open-source-process-design-kitpdk-on-ubuntu-vm-as-test-file-library)
-   - :microscope: <b>Lab-2:</b> [ Simulate a RTL design using iverilog (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))](#microscope-lab-2-simulate-a-rtl-design-using-iverilog-test-design-21-mux-verilog-file-named-as-good_muxv)
+   - :microscope: <b>Lab-2:</b> [ Simulate a RTL design using iverilog](#microscope-lab-2-simulate-a-rtl-design-using-iverilog-test-design-21-mux-verilog-file-named-as-good_muxv)
    - :microscope: <b>Lab-3:</b> [ Read and edit (editing process only) verilog file using text editor](#microscope-lab-3-read-and-edit-editing-process-only-verilog-file-using-text-editor-observe-the-verilog-code-syntax-for-test-design-21-mux-verilog-file-named-as-good_muxv)
 - :book: <b>Learning Objective-2:</b> [Introduction to Yosys and Logic synthesis](#book-Introduction-to-Yosys-and-Logic-synthesis)
 - :dart: <b>Practical Objective-2:</b> [Labs using Yosys and SKY130 PDK](#dart-Labs-using-Yosys-and-SKY130-PDK)
