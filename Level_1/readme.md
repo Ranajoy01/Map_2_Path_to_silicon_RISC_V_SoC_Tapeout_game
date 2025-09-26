@@ -108,14 +108,14 @@
    - It has `i0,i1,sel` three primary inputs.
    - It has `y` as the primary output.
    - Ports are declared after module keyword.
-   - MUX functionality is coded in the body (Inside modeule and endmodule).
+   - `MUX functionality` is coded in the body (Inside module and endmodule).
   
   Analysis of the testbench tb_good_mux.v-
 
    - It has no primary inputs or primary outputs.
    - Design 'good_mux' is instantiated in this testbench.
    - Stimulus to the design are generated.
-   - Primary outputs from design under test (DUT) or unit under test (UUT) are dumped into .vcd file as per the variation of primary inputs to UUT.
+   - Primary outputs from design under test `(DUT)` or unit under test `(UUT)` are dumped into `.vcd file` as per the variation of primary inputs to UUT.
   
   Edit file in gvim text editor-
 
