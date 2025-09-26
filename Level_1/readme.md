@@ -51,25 +51,25 @@
 ## :dart: Lab using iverilog and gtkwave 
  ### :microscope: Lab-1: Clone SKY130 open source process design kit(PDK) on Ubuntu VM as test file library
    
-   Open the Ubuntu terminal and clone the SKY130 PDK repository using the following command-
+   :zap: Open the Ubuntu terminal and clone the SKY130 PDK repository using the following command-
      
    ```
    $ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
      
    ```
-   Go to the Workshop directory cloned recently-
+   :zap: Go to the Workshop directory cloned recently-
    ```
    $ cd sky130RTLDesignAndSynthesisWorkshop
    ```
-   Here all test verilog files and standard cell libraries are available-
-   Check test verilog files-
+   :zap: Here all test verilog files and standard cell libraries are available-
+   - Check test verilog files-
    ```
    $ cd verilog_files
    $ ls
    ```
    ![test_verilog_files](Level_1/images/ts_ver.png)
    
-   Check Standard cell library-
+   - Check Standard cell library-
    ```
    $ cd lib
    $ ls
@@ -77,21 +77,23 @@
    ![standard_cell](Level_1/images/std_cell.png)
    
   ### :microscope: Lab-2: Simulate a RTL design using iverilog (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
-  Go to verilog_files directory-
+  :zap: Go to verilog_files directory-
   ```
   $ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
   ```
-  Give the design file "good_mux.v" and testbench file"tb_good_mux.v" to iverilog for compiling-
+  :zap: Give the design file "good_mux.v" and testbench file"tb_good_mux.v" to iverilog for compiling-
   ```
   $ iverilog good_mux.v tb_good_mux.v
   ```
   ![iverilog_log](Level_1/images/iverilog_log.png)
-  An executable file a.out is generated.Now execute this file-
+  
+  :zap: An executable file a.out is generated.Now execute this file-
   ```
   $ ./a.out
   ```
   ![a_out_log](Level_1/images/a_out_log.png)
-  A .vcd file is produced named as "tb_good_mux.vcd".Give this file to GTKWave-
+  
+  :zap: A `.vcd file` is produced named as "tb_good_mux.vcd".Give this file to GTKWave-
   ```
   $ gtkwave tb_good_mux.vcd
   ```
