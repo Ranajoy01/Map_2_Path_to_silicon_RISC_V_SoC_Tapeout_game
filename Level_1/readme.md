@@ -11,3 +11,12 @@
     - :microscope: <b>Lab-3:</b>
 
 ## :book: Introduction to iverilog simulator
+### :bulb: Simulator
+---
+### :bulb: Design
+---
+### :bulb: Testbench
+---
+### :bulb: How Simulator Works
+---
+### :bulb: Iverilog Based simulation flow
