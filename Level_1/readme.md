@@ -11,9 +11,13 @@
     - :microscope: <b>Lab-3:</b>
 
 ## :book: Introduction to iverilog simulator
+
 ### :bulb: Simulator
+ :rocket: RTL design is checked for matching with the specification by simulating the design.The tool used for simulation is known as simulator.
+ 
 ---
 ### :bulb: Design
+
 ---
 ### :bulb: Testbench
 ---
