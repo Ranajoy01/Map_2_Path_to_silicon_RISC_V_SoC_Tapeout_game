@@ -51,13 +51,27 @@
 ### :dart: Lab using iverilog and gtkwave 
  #### :microscope: Lab-1: Clone SKY130 open source process design kit(PDK) on Ubuntu VM as test file library
    
-   Open the Ubuntu terminal and clone the SKY130 PDK repository using the following command
+   Open the Ubuntu terminal and clone the SKY130 PDK repository using the following command-
      
    ```
    $ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
      
    ```
-
+   Go to the Workshop directory cloned recently-
+   ```
+   $ cd sky130RTLDesignAndSynthesisWorkshop
+   ```
+   Here all test verilog files and standard cell libraries are available-
+   Check test verilog files-
+   ```
+   $ cd verilog_files
+   $ ls
+   ```
+   Check Standard cell library-
+   ```
+   $ cd lib
+   $ ls
+   ```
     
       
 
