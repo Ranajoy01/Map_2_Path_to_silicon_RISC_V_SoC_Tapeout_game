@@ -9,4 +9,4 @@
 - :book: <b>Learning Objective-2:</b> Introduction to Yosys and Logic synthesis
 - :dart: <b>Practical Objective-2:</b> Labs using Yosys and SKY130 PDK
 
-## Introduction to iverilog simulator
+## :book: Introduction to iverilog simulator
