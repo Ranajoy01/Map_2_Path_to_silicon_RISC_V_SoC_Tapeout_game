@@ -237,8 +237,10 @@
    :zap: Write the netlist as `.v` file `good_mux_net.v` with or without attribute-
    ```
    // with attribute
+
    $ write_verilog good_mux_net.v
    // without attribute
+
    $ write_verilog -noattr good_mux_net.v
    ```
    ![abc](Level_1/images/abc.png)
