@@ -25,6 +25,10 @@
 ---
 ### :bulb: Testbench
    - Testbench is the setup to apply stimulus (test_vectors) to the design to check its functionality.
+   - It is the integration the Design, Stimulus generator, Stimulus observer.
+   - Stimulus generator give primary inputs to the design under test (DUT).
+   - Stimulus observer take primary outputs from the design under test (DUT).
+   - Testbench has no primary nputs or outputs.
 ---
 ### :bulb: How Simulator Works
 ---
