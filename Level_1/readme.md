@@ -111,14 +111,14 @@
    - Ports are declared after module keyword.
    - `MUX functionality` is coded in the body (Inside module and endmodule).
   
-  Analysis of the testbench `tb_good_mux.v`-
+  :zap: Analysis of the testbench `tb_good_mux.v`-
 
    - It has no primary inputs or primary outputs.
    - Design 'good_mux' is instantiated in this testbench.
    - Stimulus to the design are generated.
    - Primary outputs from design under test `(DUT)` or unit under test `(UUT)` are dumped into `.vcd file` as per the variation of primary inputs to UUT.
   
-  Edit file in gvim text editor-
+  :zap: Edit file in gvim text editor-
 
    - Press `i` to enter into the `insert` mode
    - Press `Esc` to enter into the `normal` mode
