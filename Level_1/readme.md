@@ -103,14 +103,14 @@
   $ gvim good_mux.v tb_good_mux.v -o  
   ```
   ![verilog_file_text](Level_1/images/text_vim.png)
-  Analysis of the design good_mux.v-
+  Analysis of the design `good_mux.v`-
 
    - It has `i0,i1,sel` three primary inputs.
    - It has `y` as the primary output.
    - Ports are declared after module keyword.
    - `MUX functionality` is coded in the body (Inside module and endmodule).
   
-  Analysis of the testbench tb_good_mux.v-
+  Analysis of the testbench `tb_good_mux.v`-
 
    - It has no primary inputs or primary outputs.
    - Design 'good_mux' is instantiated in this testbench.
