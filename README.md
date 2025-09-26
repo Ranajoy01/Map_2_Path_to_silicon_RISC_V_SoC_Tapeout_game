@@ -17,7 +17,7 @@
 
 ## 🗺️ Explore Map-2(Week-1): RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION
   <details>
-  <summary>:checkered_flag: Level-1(Day-1): Introduction to Verilog RTL design and Synthesis </summary>
+  <summary>:checkered_flag: <b>Level-1(Day-1):</b>b Introduction to Verilog RTL design and Synthesis </summary>
     
   ##  :checkered_flag: Level-1(Day-1): Introduction to Verilog RTL design and Synthesis
   :rocket:In this level, I have learned the basic useage of simulation tools-`iverilog, gtkwave` and synthesis tool-`yosys` and standard cell library-`SKY130 PDK`.
