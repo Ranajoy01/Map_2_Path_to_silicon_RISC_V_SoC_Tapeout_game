@@ -32,9 +32,9 @@
   <summary>:checkered_flag: Level-2(Day-2): Timing libraries,hierarchial vs flat synthesis, efficient flip-flop coding styles </summary>
   
   ##  :checkered_flag: Level-2(Day-2): Timing libraries,hierarchial vs flat synthesis, efficient flip-flop coding styles
-   :rocket:Ubuntu virtual machine system is needed for our SoC design flow journey,so I set up the system as per the requirement.Also,I attended the recorded lecture on Soc Design flow by Kunal Ghosh sir. 
+   :rocket:At this stage,I gained the overview of SKY130 PDK library parameters and learned about two types of synthesis as well as different types of flip-flop designs.
   
-  :walking: <b>[Explore Level-2 Gameplay](Map_1/Level_2/readme.md)</b>
+  :walking: <b>[Explore Level-2 Gameplay](Level_2/readme.md)</b>
   
   :chart_with_upwards_trend: <b>Level-2 Status:</b> :white_check_mark: Completed
   </details>
