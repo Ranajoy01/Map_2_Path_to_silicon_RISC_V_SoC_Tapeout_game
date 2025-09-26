@@ -8,7 +8,7 @@
    - :microscope: <b>Lab-2:</b> [ Simulate a RTL design using iverilog](#microscope-lab-2-simulate-a-rtl-design-using-iverilog-test-design-21-mux-verilog-file-named-as-good_muxv)
    - :microscope: <b>Lab-3:</b> [ Read and edit (editing process only) verilog file using text editor](#microscope-lab-3-read-and-edit-editing-process-only-verilog-file-using-text-editor-observe-the-verilog-code-syntax-for-test-design-21-mux-verilog-file-named-as-good_muxv)
 - :book: <b>Learning Objective-2:</b> [Introduction to Yosys and Logic synthesis](#book-Introduction-to-Yosys-and-Logic-synthesis)
-- :dart: <b>Practical Objective-2:</b> [Labs using Yosys and SKY130 PDK](#dart-Labs-using-Yosys-and-SKY130-PDK)
+- :dart: <b>Practical Objective-2:</b> [Labs using Yosys and SKY130 PDK](#dart-lab-using-yosys-and-sky130-pdk)
     - :microscope: <b>Lab-4:</b> [Synthesize a design using Yosys and SKY130 PDK (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))](#microscope-lab-4-synthesize-a-design-using-yosys-and-sky130-pdk-test-design-21-mux-verilog-file-named-as-good_muxv)
 
  <div align="center">:star::star::star::star::star::star:</div> 
