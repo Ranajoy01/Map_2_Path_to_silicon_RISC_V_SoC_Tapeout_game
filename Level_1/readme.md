@@ -10,6 +10,7 @@
 - :dart: <b>Practical Objective-2:</b> [Labs using Yosys and SKY130 PDK](#dart-Labs-using-Yosys-and-SKY130-PDK)
     - :microscope: <b>Lab-3:</b>
 
+ <div align="center">:star::star::star::star::star::star:</div> 
 ## :book: Introduction to iverilog simulator
 
 ### :bulb: Simulator
