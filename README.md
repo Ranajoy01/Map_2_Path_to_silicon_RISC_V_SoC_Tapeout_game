@@ -77,4 +77,4 @@
 
   ---
 
-  <div align="center">:star::star::star::star::star::star:</div>
+<div align="center">:star::star::star::star::star::star:</div>
