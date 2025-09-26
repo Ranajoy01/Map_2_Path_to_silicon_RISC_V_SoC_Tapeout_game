@@ -251,4 +251,4 @@
    ```
    $ !gvim good_mux_net.v
    ```
-   ![show](Level_1/images/show.png)
+   ![net_vim](Level_1/images/net_vim.png)
