@@ -15,9 +15,9 @@
 
 <div align="center">:star::star::star::star::star::star:</div>
 
-## 🗺️ Explore Map-2(Week-1):RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION
+## 🗺️ Explore Map-2(Week-1): RTL DESIGN, SYNTHESIS, FUNCTIONAL AND GLS VERIFICATION , OPTIMIZATION
   <details>
-  <summary>:checkered_flag: Level-1(Day-1):Introduction to Verilog RTL design and Synthesis </summary>
+  <summary>:checkered_flag: Level-1(Day-1): Introduction to Verilog RTL design and Synthesis </summary>
     
   ##  :checkered_flag: Level-1(Day-1): Introduction to Verilog RTL design and Synthesis
   :rocket:In this level, I have learned the basic useage of simulation tools-`iverilog, gtkwave` and synthesis tool-`yosys` and standard cell library-`SKY130 PDK`.
@@ -29,7 +29,7 @@
   
   ---
   <details>
-  <summary>:checkered_flag: Level-2(Day-2):Timing libraries,hierarchial vs flat synthesis, efficient flip-flop coding styles </summary>
+  <summary>:checkered_flag: Level-2(Day-2): Timing libraries,hierarchial vs flat synthesis, efficient flip-flop coding styles </summary>
   
   ##  :checkered_flag: Level-2(Day-2): Timing libraries,hierarchial vs flat synthesis, efficient flip-flop coding styles
    :rocket:Ubuntu virtual machine system is needed for our SoC design flow journey,so I set up the system as per the requirement.Also,I attended the recorded lecture on Soc Design flow by Kunal Ghosh sir. 
@@ -41,7 +41,7 @@
 
   ---
   <details>
-  <summary>:checkered_flag: Level-3(Day-2):Tools Check </summary>
+  <summary>:checkered_flag: Level-3(Day-2): Tools Check </summary>
     
   ##  :checkered_flag: Level-3(Day-2): Tools Check
   :rocket:The open source tools like Yosys,iverilog,GTK Wave are installed in my Ubuntu 64 bit VM for RTL design,verification and sysnthesis task.
