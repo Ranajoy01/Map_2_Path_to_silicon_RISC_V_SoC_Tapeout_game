@@ -158,13 +158,13 @@
    - Here we are using `sky130_fd_sc_hd__tt_025C_1v80.lib` open source library.
 ---
 ### :bulb: Reason for different flavours of gate
-- #### Why fast cell ?
-  
+
    ![fast_cell](images/fast_slow_cell.png)
-  
+
+- #### Why fast cell ?
   - Combinational delay in logic path determines the maximum speed of digital logic circuit.
     
-   ![fast_cell2](Level_1/images/fast_cell_1.png)
+   ![fast_cell_2](Level_1/images/fast_cell_1.png)
   - We need faster cells to make T<sub>comb</sub> small and thus increase mcircuit speed.
   - We can understand `setup time` with the train boarding analogy that we have to go to the station some time before the departure of the train.
   - Setup time is the time duration before clock edge from which the data should be stable in D flip-flop data input port.
