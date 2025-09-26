@@ -125,7 +125,8 @@
    - Press `i` to enter into the `insert` mode
    - Press `Esc` to enter into the `normal` mode
    - `:w` for saving the file
-
+<div align="center">:star::star::star::star::star::star:</div> 
+ 
 ## :book: Introduction to Yosys and Logic synthesis
 
 ### :bulb: Synthesizer
@@ -196,7 +197,9 @@
     - Setup time violation
 ### :bulb: Selection of cells
   - Guidance by the user in terms of `constraints` for selecting cells as per requirement.
-
+ 
+<div align="center">:star::star::star::star::star::star:</div> 
+ 
 ## :dart: Lab using Yosys and SKY130 PDK 
  ### :microscope: Lab-3: Synthesize a design using Yosys and SKY130 PDK (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
    
@@ -252,3 +255,5 @@
    $ !gvim good_mux_net.v
    ```
    ![net_vim](Level_1/images/net_vim.png)
+
+   <div align="center">:star::star::star::star::star::star:</div> 
