@@ -99,7 +99,7 @@
   ```
   ![gtkwave_op](Level_1/images/gtkwave_op.png)
     
-  ### :microscope: Lab-3: Read and edit verilog file using text editor (Observe the verilog code syntax for Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
+  ### :microscope: Lab-3: Read and edit(process only) verilog file using text editor (Observe the verilog code syntax for Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
   :zap: Open verilog files on gvim text editor ('-o' is used to open multiple files in same window)-
   ```
   $ gvim good_mux.v tb_good_mux.v -o  
