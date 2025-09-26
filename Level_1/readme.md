@@ -97,4 +97,29 @@
   ```
   ![gtkwave_op](Level_1/images/gtkwave_op.png)
     
-     
+  ### :microscope: Lab-3: Read and edit verilog file using text editor (Observe the verilog code syntax for Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
+  Open verilog files on gvim text editor ('-o' is used to open multiple files in same window)-
+  ```
+  $ gvim good_mux.v tb_good_mux.v -o  
+  ```
+  ![verilog_file_text](Level_1/images/text_vim.png)
+  Analysis of the design good_mux.v-
+
+   - It has `i0,i1,sel` three primary inputs.
+   - It has `y` as the primary output.
+   - Ports are declared after module keyword.
+   - MUX functionality is coded in the body (Inside modeule and endmodule).
+  
+  Analysis of the testbench tb_good_mux.v-
+
+   - It has no primary inputs or primary outputs.
+   - Design 'good_mux' is instantiated in this testbench.
+   - Stimulus to the design are generated.
+   - Primary outputs from design under test (DUT) or unit under test (UUT) are dumped into .vcd file as per the variation of primary inputs to UUT.
+  
+  Edit file in gvim text editor-
+
+   - Press `i` to enter into the `insert` mode
+   - Press `Esc` to enter into the `normal` mode
+   - `:w` for saving the file 
+  
