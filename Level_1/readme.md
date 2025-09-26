@@ -11,6 +11,7 @@
     - :microscope: <b>Lab-3:</b>
 
  <div align="center">:star::star::star::star::star::star:</div> 
+ 
 ## :book: Introduction to iverilog simulator
 
 ### :bulb: Simulator
@@ -46,3 +47,14 @@
    ![iverilog_flow](Level_1/images/iv_sim_flow.png)
 
   <div align="center">:star::star::star::star::star::star:</div> 
+
+### :dart: Lab using iverilog and gtkwave 
+   #### :microscope: Lab-1: Clone SKY130 open source process design kit(PDK) on Ubuntu VM as test file library.
+     Open the Ubuntu terminal and clone the SKY130 PDK repository using the following command-
+     ```
+     $ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+     ```
+
+    
+      
+
