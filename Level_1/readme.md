@@ -49,8 +49,10 @@
   <div align="center">:star::star::star::star::star::star:</div> 
 
 ### :dart: Lab using iverilog and gtkwave 
-   #### :microscope: Lab-1: Clone SKY130 open source process design kit(PDK) on Ubuntu VM as test file library.
-     Open the Ubuntu terminal and clone the SKY130 PDK repository using the following command-
+   #### :microscope: Lab-1: Clone SKY130 open source process design kit(PDK) on Ubuntu VM as test file library
+   
+     Open the Ubuntu terminal and clone the SKY130 PDK repository using the following command
+     
      ```
      $ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
      ```
