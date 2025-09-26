@@ -67,11 +67,12 @@
    $ cd verilog_files
    $ ls
    ```
+   ![test_verilog_files](Level_1/images/ts_ver.png)
    Check Standard cell library-
    ```
    $ cd lib
    $ ls
    ```
-    
+   ![standard_cell](Level_1/images/std_cell.png)
       
 
