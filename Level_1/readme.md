@@ -233,7 +233,13 @@
    $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    ```
    ![abc](Level_1/images/abc.png)
-   
+
+   :zap: Visualize the synthesized design-
+   ```
+   $ show
+   ```
+   ![show](Level_1/images/show.png)
+
    :zap: Write the netlist as `.v` file `good_mux_net.v` with or without attribute (use only one)-
    ```
    $ write_verilog good_mux_net.v
@@ -241,3 +247,8 @@
    ```
    ![write_ver](Level_1/images/write_ver.png)
    
+   :zap: Read the netlist-
+   ```
+   $ !gvim good_mux_net.v
+   ```
+   ![show](Level_1/images/show.png)
