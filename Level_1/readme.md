@@ -2,7 +2,7 @@
 
 ## List of Objectives
 
-- :book: <b>Learning Objective-1:</b> [Introduction to iverilog simulaor](#:book:-Introduction-to-iverilog-simulator)
+- :book: <b>Learning Objective-1:</b> [Introduction to iverilog simulaor](#:-book-:-Introduction-to-iverilog-simulator)
 - :dart: <b>Practiccal Objective-1:</b> [Lab using iverilog and gtkwave](#Lab-using-iverilog-and-gtkwave)
    - :microscope: <b>Lab-1:</b>
    - :microscope: <b>Lab-2:</b>
