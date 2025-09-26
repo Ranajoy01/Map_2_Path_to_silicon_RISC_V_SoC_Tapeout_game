@@ -85,13 +85,16 @@
   ```
   $ iverilog good_mux.v tb_good_mux.v
   ```
+  ![iverilog_log](Level_1/images/iverilog_log.png)
   An executable file a.out is generated.Now execute this file-
   ```
   $ ./a.out
   ```
+  ![a_out_log](Level_1/images/a_out_log.png)
   A .vcd file is produced named as "tb_good_mux.vcd".Give this file to GTKWave-
   ```
   $ gtkwave tb_good_mux.vcd
   ```
+  ![gtkwave_op](Level_1/images/gtkwave_op.png)
     
      
