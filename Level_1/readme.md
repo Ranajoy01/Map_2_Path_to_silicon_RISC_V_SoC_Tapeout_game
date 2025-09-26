@@ -156,10 +156,43 @@
    - Here we are using `sky130_fd_sc_hd__tt_025C_1v80.lib` open source library.
 ---
 ### :bulb: Reason for different flavours of gate
-- ### Why fast cell ?
+- #### Why fast cell ?
+  
+   ![fast_cell](Level_1/images/fast_slow_cell.png)
   
   - Combinational delay in logic path determines the maximum speed of digital logic circuit.
-   ![fast_cell](Level_1/images/fast_cell_1.png)
-  - We need faster cells to make T<sub>comb</sub> small
----    
+    
+   ![fast_cell2](Level_1/images/fast_cell_1.png)
+  - We need faster cells to make T<sub>comb</sub> small and thus increase mcircuit speed.
+  - We can understand `setup time` with the train boarding analogy that we have to go to the station some time before the departure of the train.
+  - Setup time is the time duration before clock edge from which the data should be stable in D flip-flop data input port.
+  - Used for preventing Setup time violation and critical path issues.
+- #### Why slow cell ?
   
+  - Reliable data flow (launch and capture) between flip-flops.
+    
+   ![slow_cell](Level_1/images/slow_cell_1.png)
+  - We need faster cells to make T<sub>comb</sub> small and thus increase mcircuit speed.
+  - Suppose DFF-A launch data in a clk-edge and DFF-B receive that data in next clk-edge.
+  - DFF-B should not receive the new data of DFF-A in clk-edge-1.DFF-B should receive clk-edge-0 data of DFF-A in clk-edge-1.
+  - DFF-A propagation delay (T<sub>CQ_A</sub>) and T<sub>comb</sub> are used to slow the DFF-A new data to reach the DFF-B in same clock edge.
+  - Hold time is the time duration after clock edge till which the data should be stable in D flip-flop data input port.
+  - Used for preventing hold time violation.
+    
+  ![slow_cell_2](Level_1/images/slow_cell_2.png)
+---    
+### :bulb: Problems with fast cell and slow cell
+  - Capacitence is the load in digital circuit
+  - Faster charging or discharging of capacitance  means smaller the cell delay.
+  - For faster charging/discharging, we need transistors capable of sourcing more current (wide transistors).
+  - For the slower cells narrow transistors so power and are less.
+  - #### Fast cell problem
+    - Wide transistors
+    - More area, more power
+    - Hold time violation
+  - #### Slow cell problem
+    - Sluggish circuit
+    - More delay
+    - Setup time violation
+### :bulb: Selection of cells
+  - Guidance by the user in terms of `constraints` for selecting cells as per requirement. 
