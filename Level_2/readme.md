@@ -49,9 +49,9 @@
    - The performance of cells in `.lib` file are generalized in certain values of these three parameters.
    - We can observe the parameters in the name of `.lib` file.
    -  For the `sky130_fd_sc_hd__tt_025C_1v80.lib` file-
-      - Process: `tt` (Typical pocess)
-      - Voltage: 1.80 V.
-      - Temparatur: 25 degree celcius.
+      - Process: `tt` (Typical pocess).
+      - Voltage: `1v80` (1.80 V).
+      - Temparatur: `025C` (25 degree celcius).
      
    ```
    /cell+ space key
