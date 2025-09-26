@@ -32,7 +32,7 @@
   <summary>:checkered_flag: Level-2(Day-2): Timing libraries,hierarchial vs flat synthesis, efficient flip-flop coding styles </summary>
   
   ##  :checkered_flag: Level-2(Day-2): Timing libraries,hierarchial vs flat synthesis, efficient flip-flop coding styles
-   :rocket:At this stage,I gained the overview of SKY130 PDK library parameters and learned about two types of synthesis as well as different types of flip-flop designs.
+   :rocket:At this stage, I have gained the overview of SKY130 PDK library parameters and learned about two types of synthesis as well as different types of flip-flop designs.
   
   :walking: <b>[Explore Level-2 Gameplay](Level_2/readme.md)</b>
   
