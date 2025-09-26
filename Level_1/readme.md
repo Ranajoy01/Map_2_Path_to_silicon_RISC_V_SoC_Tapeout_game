@@ -118,7 +118,7 @@
    - Stimulus to the design are generated.
    - Primary outputs from design under test `(DUT)` or unit under test `(UUT)` are dumped into `.vcd file` as per the variation of primary inputs to UUT.
   
-  :zap: Edit file in gvim text editor-
+  :bow_and_arrow: Edit file in gvim text editor-
 
    - Press `i` to enter into the `insert` mode
    - Press `Esc` to enter into the `normal` mode
