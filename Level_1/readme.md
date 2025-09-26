@@ -98,13 +98,13 @@
   ![gtkwave_op](Level_1/images/gtkwave_op.png)
     
   ### :microscope: Lab-3: Read and edit verilog file using text editor (Observe the verilog code syntax for Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
-  Open verilog files on gvim text editor ('-o' is used to open multiple files in same window)-
+  :zap: Open verilog files on gvim text editor ('-o' is used to open multiple files in same window)-
   ```
   $ gvim good_mux.v tb_good_mux.v -o  
   ```
   ![verilog_file_text](Level_1/images/text_vim.png)
   
-  Analysis of the design `good_mux.v`-
+   :zap: Analysis of the design `good_mux.v`-
 
    - It has `i0,i1,sel` three primary inputs.
    - It has `y` as the primary output.
@@ -118,7 +118,7 @@
    - Stimulus to the design are generated.
    - Primary outputs from design under test `(DUT)` or unit under test `(UUT)` are dumped into `.vcd file` as per the variation of primary inputs to UUT.
   
-  :bow_and_arrow: Edit file in gvim text editor-
+  :zap: Edit file in gvim text editor-
 
    - Press `i` to enter into the `insert` mode
    - Press `Esc` to enter into the `normal` mode
