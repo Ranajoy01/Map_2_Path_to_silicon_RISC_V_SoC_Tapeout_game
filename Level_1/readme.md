@@ -13,9 +13,9 @@
 ## :book: Introduction to iverilog simulator
 
 ### :bulb: Simulator
-  - RTL design is checked for matching with the specification by simulating the design.
-  - The tool used for `simulating the design` is known as `simulator`.
-  - `Icarus Verilog (iverilog)` is an example of simulator.
+   - RTL design is checked for matching with the specification by simulating the design.
+   - The tool used for `simulating the design` is known as `simulator`.
+   - `Icarus Verilog (iverilog)` is an example of simulator.
  
 ---
 ### :bulb: Design
