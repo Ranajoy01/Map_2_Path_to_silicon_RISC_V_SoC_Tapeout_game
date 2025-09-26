@@ -258,3 +258,10 @@
    ![net_vim](images/net_vim.png)
 
    <div align="center">:star::star::star::star::star::star:</div> 
+   
+## :trophy: Level Status: 
+
+- All objectives completed.
+- I have learned simulation using iverilog,GTKWave (for timing diagram viewing) and synthesis using Yosys and SKY130 PDK.
+- 🔓 Next level unlocked 🔜 System setup and SoC design flow lecture.
+
