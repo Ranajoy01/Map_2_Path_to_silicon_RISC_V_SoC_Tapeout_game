@@ -51,7 +51,7 @@
    -  For the `sky130_fd_sc_hd__tt_025C_1v80.lib` file-
       - Process: `tt` (Typical pocess).
       - Voltage: `1v80` (1.80 V).
-      - Temparatur: `025C` (25 degree celcius).
+      - Temparature: `025C` (25 degree celcius).
      
    ```
    /cell+ space key
