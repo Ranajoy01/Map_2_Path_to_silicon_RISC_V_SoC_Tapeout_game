@@ -42,6 +42,23 @@
    :g//
    ```
    ![lib_cell](images/lib_cell.png)
+
+   :zap: Significance of the filename-
+
+   - Based on process, voltage and temperature variation cell performance changes.
+   - The performance of cells in `.lib` file are generalized in certain values of these three parameters.
+   - We can observe the parameters in the name of `.lib` file.
+   -  For the `sky130_fd_sc_hd__tt_025C_1v80.lib` file-
+      - Process: `tt` (Typical pocess)
+      - Voltage: 1.80 V.
+      - Temparatur: 25 degree celcius.
+     
+   ```
+   /cell+ space key
+   :g//
+   ```
+   ![lib_cell](images/lib_cell.png)
+   
   ### :microscope: Lab-2: Simulate a RTL design using iverilog (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
   :zap: Go to verilog_files directory-
   ```
