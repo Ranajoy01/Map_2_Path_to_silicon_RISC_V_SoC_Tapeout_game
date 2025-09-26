@@ -33,8 +33,8 @@
 ### :bulb: How Simulator Works
    - Simulator looks for the changes in input values.
    - Output is evaluated based on the change of input `(if no change in input, no change in output)`.
-   - 
-   ![testbench_img](Level_1/images/tb_rv.png)  
+
+    ![testbench_img](Level_1/images/tb_rv.png)  
 ---
 ### :bulb: Iverilog Based simulation flow
    1. Design and testbench files are given to iverilog simulatior.
