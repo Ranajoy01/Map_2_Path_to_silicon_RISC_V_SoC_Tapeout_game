@@ -37,7 +37,7 @@
    - Simulator looks for the changes in input values.
    - Output is evaluated based on the change of input `(if no change in input, no change in output)`.
      
-     ![testbench_img](Level_1/images/tb_rv.png)  
+     ![testbench_img](images/tb_rv.png)  
 ---
 ### :bulb: Iverilog Based simulation flow
    1. Design and testbench files are given to iverilog simulatior.
@@ -45,7 +45,7 @@
    3. .vcd file is given to gtkwave.
    4. gtkwave helps to visualize the input-output waveform (timing diagram).
       
-   ![iverilog_flow](Level_1/images/iv_sim_flow.png)
+   ![iverilog_flow](images/iv_sim_flow.png)
 
   <div align="center">:star::star::star::star::star::star:</div> 
 
@@ -68,14 +68,14 @@
    $ cd verilog_files
    $ ls
    ```
-   ![test_verilog_files](Level_1/images/ts_ver.png)
+   ![test_verilog_files](images/ts_ver.png)
    
    - Check Standard cell library-
    ```
    $ cd lib
    $ ls
    ```
-   ![standard_cell](Level_1/images/std_cell.png)
+   ![standard_cell](images/std_cell.png)
    
   ### :microscope: Lab-2: Simulate a RTL design using iverilog (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
   :zap: Go to verilog_files directory-
@@ -86,26 +86,26 @@
   ```
   $ iverilog good_mux.v tb_good_mux.v
   ```
-  ![iverilog_log](Level_1/images/iverilog_log.png)
+  ![iverilog_log](images/iverilog_log.png)
   
   :zap: An executable file a.out is generated.Now execute this file-
   ```
   $ ./a.out
   ```
-  ![a_out_log](Level_1/images/a_out_log.png)
+  ![a_out_log](images/a_out_log.png)
   
   :zap: A `.vcd file` is produced named as "tb_good_mux.vcd".Give this file to GTKWave-
   ```
   $ gtkwave tb_good_mux.vcd
   ```
-  ![gtkwave_op](Level_1/images/gtkwave_op.png)
+  ![gtkwave_op](images/gtkwave_op.png)
     
   ### :microscope: Lab-3: Read and edit (editing process only) verilog file using text editor (Observe the verilog code syntax for Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
   :zap: Open verilog files on gvim text editor ('-o' is used to open multiple files in same window)-
   ```
   $ gvim good_mux.v tb_good_mux.v -o  
   ```
-  ![verilog_file_text](Level_1/images/text_vim.png)
+  ![verilog_file_text](images/text_vim.png)
   
    :zap: Analysis of the design `good_mux.v`-
 
@@ -148,7 +148,7 @@
    - Netlist is generated.
    - The netlist is also simulated using iverilog with the `RTL design testbench` to prevent `synthesis-simulation mismatch`.
 
-   ![yosys_flow](Level_1/images/yosys_flow.png)
+   ![yosys_flow](images/yosys_flow.png)
     
 ---
 ### :bulb: `.lib` file
@@ -160,7 +160,7 @@
 ### :bulb: Reason for different flavours of gate
 - #### Why fast cell ?
   
-   ![fast_cell](Level_1/images/fast_slow_cell.png)
+   ![fast_cell](images/fast_slow_cell.png)
   
   - Combinational delay in logic path determines the maximum speed of digital logic circuit.
     
@@ -173,7 +173,7 @@
   
   - Reliable data flow (launch and capture) between flip-flops.
     
-   ![slow_cell](Level_1/images/slow_cell_1.png)
+   ![slow_cell](images/slow_cell_1.png)
   - We need faster cells to make T<sub>comb</sub> small and thus increase mcircuit speed.
   - Suppose DFF-A launch data in a clk-edge and DFF-B receive that data in next clk-edge.
   - DFF-B should not receive the new data of DFF-A in clk-edge-1.DFF-B should receive clk-edge-0 data of DFF-A in clk-edge-1.
@@ -181,7 +181,7 @@
   - Hold time is the time duration after clock edge till which the data should be stable in D flip-flop data input port.
   - Used for preventing hold time violation.
     
-  ![slow_cell_2](Level_1/images/slow_cell_2.png)
+  ![slow_cell_2](images/slow_cell_2.png)
 ---    
 ### :bulb: Problems with fast cell and slow cell
   - Capacitence is the load in digital circuit
@@ -212,49 +212,49 @@
    ```
    $ yosys
    ```
-   ![yosys](Level_1/images/yosys.png)
+   ![yosys](images/yosys.png)
 
    :zap: Give the `.lib` file to yosys for checking the availavle cells-
    ```
    $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    ```
-   ![read_lib](Level_1/images/read_lib.png)
+   ![read_lib](images/read_lib.png)
    
    :zap: Give the `.v` file `good_mux.v` to yosys for reading the design-
    ```
    $ read_verilog good_mux.v
    ```
-   ![read_ver](Level_1/images/read_ver.png)
+   ![read_ver](images/read_ver.png)
    
    :zap: Specify the module `good_mux` which to be synthesized as root design-
    ```
    $ synth -top good_mux
    ```
-   ![synth](Level_1/images/synth.png)
+   ![synth](images/synth.png)
    
    :zap: Generate the netlist for the design using the standard cell library-
    ```
    $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    ```
-   ![abc](Level_1/images/abc.png)
+   ![abc](images/abc.png)
 
    :zap: Visualize the synthesized design-
    ```
    $ show
    ```
-   ![show](Level_1/images/show.png)
+   ![show](images/show.png)
 
    :zap: Write the netlist as `.v` file `good_mux_net.v` with or without attribute (use only one)-
    ```
    $ write_verilog good_mux_net.v
    $ write_verilog -noattr good_mux_net.v
    ```
-   ![write_ver](Level_1/images/write_ver.png)
+   ![write_ver](images/write_ver.png)
    
    :zap: Read the netlist-
    ```
    $ !gvim good_mux_net.v
    ```
-   ![net_vim](Level_1/images/net_vim.png)
+   ![net_vim](images/net_vim.png)
 
    <div align="center">:star::star::star::star::star::star:</div> 
