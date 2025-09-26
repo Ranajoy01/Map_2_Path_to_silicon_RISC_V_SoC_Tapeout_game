@@ -208,7 +208,7 @@
    ```
    $ yosys
    ```
-   ![yosys][Level_1/images/yosys.png]
+   ![yosys](Level_1/images/yosys.png)
 
    :zap: Here all test verilog files and standard cell libraries are available-
    - Check test verilog files-
