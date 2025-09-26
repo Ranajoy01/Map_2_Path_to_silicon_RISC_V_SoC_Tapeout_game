@@ -32,7 +32,7 @@
   <summary>:checkered_flag: <b>Level-2(Day-2):</b> Timing libraries,hierarchial vs flat synthesis, efficient flip-flop coding styles </summary>
   
   ##  :checkered_flag: Level-2(Day-2): Timing libraries,hierarchial vs flat synthesis, efficient flip-flop coding styles
-   :rocket:At this stage, I have gained the overview of SKY130 PDK library parameters and learned about two types of synthesis as well as different types of flip-flop designs.
+   :rocket:At this stage, I have gained the `overview of SKY130 PDK library parameters` and learned about `two types of synthesis` as well as different types of `flip-flop designs`.
   
   :walking: <b>[Explore Level-2 Gameplay](Level_2/readme.md)</b>
   
@@ -56,7 +56,7 @@
   <summary>:checkered_flag: <b>Level-4(Day-4):</b> Gate level simulation,blocking vs non-blocking statement,synthesis-simulation mismatch </summary>
   
   ##  :checkered_flag: Level-4(Day-4): Gate level simulation,blocking vs non-blocking statement,synthesis-simulation mismatch
-   :rocket:At this stage, I have gained the overview of SKY130 PDK library parameters and learned about two types of synthesis as well as different types of flip-flop designs.
+   :rocket:During this level,I understood the importance of functional verification and GLS verification using netlist,application of various assignment statements in procedural always block and the significance     of synthesis-simulation mismatch(caveats and fix).
   
   :walking: <b>[Explore Level-4 Gameplay](Level_4/readme.md)</b>
   
