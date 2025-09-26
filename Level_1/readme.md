@@ -75,5 +75,23 @@
    $ ls
    ```
    ![standard_cell](Level_1/images/std_cell.png)
-      
-
+   
+  ### :microscope: Lab-2: Simulate a RTL design using iverilog (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
+  Go to verilog_files directory-
+  ```
+  $ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
+  ```
+  Give the design file "good_mux.v" and testbench file"tb_good_mux.v" to iverilog for compiling-
+  ```
+  $ iverilog good_mux.v tb_good_mux.v
+  ```
+  An executable file a.out is generated.Now execute this file-
+  ```
+  $ ./a.out
+  ```
+  A .vcd file is produced named as "tb_good_mux.vcd".Give this file to GTKWave-
+  ```
+  $ gtkwave tb_good_mux.vcd
+  ```
+    
+     
