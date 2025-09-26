@@ -41,12 +41,38 @@
 
   ---
   <details>
-  <summary>:checkered_flag: Level-3(Day-2): Tools Check </summary>
-    
-  ##  :checkered_flag: Level-3(Day-2): Tools Check
-  :rocket:The open source tools like Yosys,iverilog,GTK Wave are installed in my Ubuntu 64 bit VM for RTL design,verification and sysnthesis task.
-  <br>
-  :walking: <b>[Explore Level-3 Gameplay](Map_1/Level_3/readme.md)</b>
-  <br>
-  :chart_with_upwards_trend: <b>Level-3 Status:</b> :white_check_mark: Completed
+  <summary>:checkered_flag: Level-3(Day-3): Combinational and sequential optimization</summary>
+  
+  ##  :checkered_flag: Level-3(Day-3): Combinational and sequential optimization
+   :rocket:At this stage, I have gained the overview of SKY130 PDK library parameters and learned about two types of synthesis as well as different types of flip-flop designs.
+  
+  :walking: <b>[Explore Level-2 Gameplay](Level_2/readme.md)</b>
+  
+  :chart_with_upwards_trend: <b>Level-2 Status:</b> :white_check_mark: Completed
   </details>
+
+  ---
+  <details>
+  <summary>:checkered_flag: Level-4(Day-4): Gate level simulation,blocking vs non-blocking statement,synthesis-simulation mismatch </summary>
+  
+  ##  :checkered_flag: Level-4(Day-4): Gate level simulation,blocking vs non-blocking statement,synthesis-simulation mismatch
+   :rocket:At this stage, I have gained the overview of SKY130 PDK library parameters and learned about two types of synthesis as well as different types of flip-flop designs.
+  
+  :walking: <b>[Explore Level-2 Gameplay](Level_2/readme.md)</b>
+  
+  :chart_with_upwards_trend: <b>Level-2 Status:</b> :white_check_mark: Completed
+  </details>
+
+  ---
+  <details>
+  <summary>:checkered_flag: Level-5(Day-5): Optimization in synthesis (If,case,for,generate useage in verilog) </summary>
+  
+  ##  :checkered_flag: Level-5(Day-5): Optimization in synthesis (If,case,for,generate useage in verilog) 
+   :rocket:At this stage, I have gained the overview of SKY130 PDK library parameters and learned about two types of synthesis as well as different types of flip-flop designs.
+  
+  :walking: <b>[Explore Level-2 Gameplay](Level_2/readme.md)</b>
+  
+  :chart_with_upwards_trend: <b>Level-2 Status:</b> :white_check_mark: Completed
+  </details>
+
+  ---
