@@ -156,11 +156,10 @@
    - Here we are using `sky130_fd_sc_hd__tt_025C_1v80.lib` open source library.
 ---
 ### :bulb: Reason for different flavours of gate
-   - ### Why fast cell ?
-   Combinational delay in logic path determines the maximum speed of digital logic circuit.
-   
-   - Logic gates like `and, or, not` and blocks like `mux, or_and_invert,D flip-flop` etc.
-   - There are different flavors of same gate `slow`, `medium`, `fast`.
-   - Here we are using `sky130_fd_sc_hd__tt_025C_1v80.lib` open source library.
+- ### Why fast cell ?
+  
+  - Combinational delay in logic path determines the maximum speed of digital logic circuit.
+   ![fast_cell](Level_1/images/fast_cell_1.png)
+  - We need faster cells to make `T<sub>comb</sub>` small
 ---    
   
