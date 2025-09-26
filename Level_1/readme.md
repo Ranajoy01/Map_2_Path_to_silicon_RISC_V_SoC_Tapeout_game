@@ -210,18 +210,36 @@
    ```
    ![yosys](Level_1/images/yosys.png)
 
-   :zap: Here all test verilog files and standard cell libraries are available-
-   - Check test verilog files-
+   :zap: Give the `.lib` file to yosys for checking the availavle cells-
    ```
-   $ cd verilog_files
-   $ ls
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    ```
-   ![test_verilog_files](Level_1/images/ts_ver.png)
+   ![read_lib](Level_1/images/read_lib.png)
    
-   - Check Standard cell library-
+   :zap: Give the `.v` file `good_mux.v` to yosys for reading the design-
    ```
-   $ cd lib
-   $ ls
+   $ read_verilog good_mux.v
    ```
-   ![standard_cell](Level_1/images/std_cell.png)
+   ![read_ver](Level_1/images/read_ver.png)
+   
+   :zap: Specify the module `good_mux` which to be synthesized as root design-
+   ```
+   $ synth -top good_mux
+   ```
+   ![synth](Level_1/images/synth.png)
+   
+   :zap: Generate the netlist for the design using the standard cell library-
+   ```
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   ```
+   ![abc](Level_1/images/abc.png)
+   
+   :zap: Write the netlist as `.v` file `good_mux_net.v` with or without attribute-
+   ```
+   // with attribute
+   $ write_verilog good_mux_net.v
+   // without attribute
+   $ write_verilog -noattr good_mux_net.v
+   ```
+   ![abc](Level_1/images/abc.png)
    
