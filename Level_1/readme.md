@@ -19,9 +19,12 @@
  
 ---
 ### :bulb: Design
-
+   - Design is the actual verilog code or set of verilog codes which has the intended functionality to meet with nthe required specification of hardware.
+   - Written in hardware description language (HDL) like Verilog.
+   - Functional verification is used to validate the RTL design.
 ---
 ### :bulb: Testbench
+   - Testbench is the setup to apply stimulus (test_vectors) to the design to check its functionality.
 ---
 ### :bulb: How Simulator Works
 ---
