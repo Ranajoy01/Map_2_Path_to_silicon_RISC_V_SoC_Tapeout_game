@@ -103,6 +103,7 @@
   $ gvim good_mux.v tb_good_mux.v -o  
   ```
   ![verilog_file_text](Level_1/images/text_vim.png)
+  
   Analysis of the design `good_mux.v`-
 
    - It has `i0,i1,sel` three primary inputs.
