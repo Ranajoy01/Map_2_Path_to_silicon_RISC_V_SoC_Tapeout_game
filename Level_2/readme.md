@@ -36,13 +36,6 @@
    ```
    ![lib_vim_2](images/lib_vim_2.png)
    
-   :zap: Cell names can be seen using the following command-
-   ```
-   /cell+ space key
-   :g//
-   ```
-   ![lib_cell](images/lib_cell.png)
-
    :zap: Significance of the filename-
 
    - Based on process, voltage and temperature variation cell performance changes.
@@ -52,37 +45,28 @@
       - Process: `tt` (Typical pocess).
       - Voltage: `1v80` (1.80 V).
       - Temparature: `025C` (25 degree celcius).
-     
+   
+  ### :microscope: Lab-2: Observe Cell definition, parameters
+  :zap: Cell names can be seen using the following command-
    ```
    /cell+ space key
    :g//
    ```
    ![lib_cell](images/lib_cell.png)
-   
-  ### :microscope: Lab-2: Simulate a RTL design using iverilog (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
-  :zap: Go to verilog_files directory-
+
+  :zap: Now we can check any cell's line number and go to that cell definition-
   ```
-  $ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
+  :
   ```
-  :zap: Give the design file "good_mux.v" and testbench file"tb_good_mux.v" to iverilog for compiling-
-  ```
-  $ iverilog good_mux.v tb_good_mux.v
-  ```
-  ![iverilog_log](images/iverilog_log.png)
+  ![lib_cell_1](images/lib_cell_1.png)
   
-  :zap: An executable file a.out is generated.Now execute this file-
-  ```
-  $ ./a.out
-  ```
-  ![a_out_log](images/a_out_log.png)
-  
-  :zap: A `.vcd file` is produced named as "tb_good_mux.vcd".Give this file to GTKWave-
-  ```
-  $ gtkwave tb_good_mux.vcd
-  ```
-  ![gtkwave_op](images/gtkwave_op.png)
+  :zap: Analyze the cell parameters-
+     - There are different leakage power for different input combinations.
+     - Area,power,capacitance are also present in the definition.
+     
+  ![ana_lib_cell](images/ana_lib_cell.png)
     
-  ### :microscope: Lab-3: Read and edit (editing process only) verilog file using text editor (Observe the verilog code syntax for Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
+  ### :microscope: Lab-3: Compare area,power of variants of same cell
   :zap: Open verilog files on gvim text editor ('-o' is used to open multiple files in same window)-
   ```
   $ gvim good_mux.v tb_good_mux.v -o  
