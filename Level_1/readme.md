@@ -13,8 +13,7 @@
 ## :book: Introduction to iverilog simulator
 
 ### :bulb: Simulator
-
-    - RTL design is checked for matching with the specification by simulating the design.The tool used for simulation is known as simulator.
+ - RTL design is checked for matching with the specification by simulating the design.The tool used for simulation is known as simulator.
  
 ---
 ### :bulb: Design
