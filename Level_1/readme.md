@@ -31,5 +31,8 @@
    - Testbench has no primary inputs or outputs.
 ---
 ### :bulb: How Simulator Works
+   - Simulator looks for the changes in input values.
+   - Output is evaluated based on the change of input `(if no change in input, no change in output)`.
+     
 ---
 ### :bulb: Iverilog Based simulation flow
