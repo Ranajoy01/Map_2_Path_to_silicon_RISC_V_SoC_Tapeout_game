@@ -145,15 +145,20 @@
    - Logical blocks/gates are translated to standard cells from process design kit (PDK) libray.
    - Netlist is generated.
    - The netlist is also simulated using iverilog with the `RTL design testbench` to prevent `synthesis-simulation mismatch`.
+![yosys_flow](Level_1/images/yosys_flow.png)
 ---
 ### :bulb: `.lib` file
    - `.lib` file is the collection of logical modules (blocks or gates).
    - Logic gates like `and, or, not` and blocks like `mux, or_and_invert,D flip-flop` etc.
    - There are different flavors of same gate `slow`, `medium`, `fast`.
    - Here we are using `sky130_fd_sc_hd__tt_025C_1v80.lib` open source library.
-   - Logical blocks/gates are translated to standard cells from process design kit (PDK) libray.
-   - Netlist is generated.
-   - The netlist is also simulated using iverilog with the `RTL design testbench` to prevent `synthesis-simulation mismatch`.
 ---
-    
+### :bulb: Reason for different flavours of gate
+   - ### Why fast cell ?
+   Combinational delay in logic path determines the maximum speed of digital logic circuit.
+   
+   - Logic gates like `and, or, not` and blocks like `mux, or_and_invert,D flip-flop` etc.
+   - There are different flavors of same gate `slow`, `medium`, `fast`.
+   - Here we are using `sky130_fd_sc_hd__tt_025C_1v80.lib` open source library.
+---    
   
