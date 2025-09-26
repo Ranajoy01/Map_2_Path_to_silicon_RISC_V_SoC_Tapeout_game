@@ -43,3 +43,5 @@
    4. gtkwave helps to visualize the input-output waveform (timing diagram).
       
    ![iverilog_flow](Level_1/images/iv_sim_flow.png)
+
+  <div align="center">:star::star::star::star::star::star:</div> 
