@@ -19,7 +19,7 @@
  
 ---
 ### :bulb: Design
-   - Design is the actual verilog code or set of verilog codes which has the intended functionality to meet with nthe required specification of hardware.
+   - Design is the actual verilog code or set of verilog codes which has the intended functionality to meet with the required specification.
    - Written in hardware description language (HDL) like Verilog.
    - Functional verification is used to validate the RTL design.
 ---
