@@ -76,3 +76,5 @@
   </details>
 
   ---
+
+  <div align="center">:star::star::star::star::star::star:</div>
