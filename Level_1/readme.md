@@ -124,5 +124,27 @@
 
    - Press `i` to enter into the `insert` mode
    - Press `Esc` to enter into the `normal` mode
-   - `:w` for saving the file 
+   - `:w` for saving the file
+
+## :book: Introduction to Yosys and Logic synthesis
+
+### :bulb: Synthesizer
+   - RTL design to gate level design.
+   - RTL design is the behavoural representation of the required specification.
+   - Gate level design means representation of the required specification as the connection of logic gates.
+   - `Netlist` is the file which includes the required locgic gates and connections between gates after synthesizing.
+   - The tool used for synthesizing the RTL design is known as synthesizer.
+   - `Yosys` is an example of open source synthesizer.
+  
+---
+### :bulb: Yosys based synthesis flow
+   - Start yosys
+   - `.lib file` is given to yosys.
+   - `.v design file` is given to yosys
+   - Top module is synthesized as interconnection of logical block.
+   - Logical blocks/gates are translated to standard cells from process design kit (PDK) libray.
+   - Netlist is generated.
+   - The netlist is also simulated using iverilog with the `RTL design testbench` to prevent `synthesis-simulation mismatch`.
+---
+    
   
