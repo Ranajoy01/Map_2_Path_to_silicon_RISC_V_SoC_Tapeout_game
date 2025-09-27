@@ -4,8 +4,7 @@
 
 - :dart: <b>Practiccal Objective-1:</b> [Lab on Combinational logic optimization](#dart-lab-on-combinational-logic-optimization
 )
-   - :microscope: <b>Lab-1:</b> [Observe and synthesize `opt*.v` files and observe optimization](#microscope-lab-1-observe-and-synthesize-optv-files-and-observe-optimization
-)
+   - :microscope: <b>Lab-1:</b> [Observe and synthesize `opt*.v` files and observe optimization](#microscope-lab-1-observe-and-synthesize-the-combinational-logic-designs-and-observe-optimization)
 - :dart: <b>Practical Objective-3:</b> [Lab on Sequential logic optimization (`Sequential constant`)](#dart-lab-on-sequential-logic-optimization-sequential-constant
 )
     - :microscope: <b>Lab-2:</b> [Observe the designs `dff_cons*.v`](#microscope-lab-2-observe-the-designs-dff_consv
