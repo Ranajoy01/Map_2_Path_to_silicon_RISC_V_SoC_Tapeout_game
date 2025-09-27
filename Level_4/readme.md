@@ -1,100 +1,71 @@
-# Level-3(Day-3): Combinational and sequential optimization
+# Level-3(Day-3): Gate level simulation,blocking vs non-blocking statement,synthesis-simulation mismatch
+
 
 ## List of Objectives
 
-- :dart: <b>Practiccal Objective-1:</b> [Lab on Combinational logic optimization](#dart-lab-on-combinational-logic-optimization
-)
-   - :microscope: <b>Lab-1:</b> [Observe and synthesize `opt*.v` files and observe optimization](#microscope-lab-1-observe-and-synthesize-optv-files-and-observe-optimization
-)
-- :dart: <b>Practical Objective-3:</b> [Lab on Sequential logic optimization (`Sequential constant`)](#dart-lab-on-sequential-logic-optimization-sequential-constant
-)
-    - :microscope: <b>Lab-2:</b> [Observe the designs `dff_cons*.v`](#microscope-lab-2-observe-the-designs-dff_consv
-)
-    - :microscope: <b>Lab-3:</b> [Simulate the designs `dff_cons*.v`](#microscope-lab-3-simulate-the-designs-dff_consv
-)
-    - :microscope: <b>Lab-4:</b> [Synthesize the designs `dff_cons*.v` and observe optimizations](#microscope-lab-4-synthesize-the-designs-dff_consv-and-observe-optimizations
-)
- 
-- :dart: <b>Practical Objective-3:</b> [Lab on Sequential logic optimization (`Sequential unused output`)](#dart-lab-on-sequential-logic-optimization-sequential-unused-output
-)
-    - :microscope: <b>Lab-5:</b> [Observe the designs `counter_opt*.v`](#microscope-lab-5-observe-the-designs-counter_optv
-)
-    - :microscope: <b>Lab-6:</b> [Synthesize the designs `counter_opt*.v` and observe optimizations](#microscope-lab-6-synthesize-the-designs-counter_optv-and-observe-optimizations
-)
-      
+ - :dart: <b>Practiccal Objective-1:</b> []()
+   - :microscope: <b>Lab-1:</b> []()
+     
  <div align="center">:star::star::star::star::star::star:</div> 
  
-## :dart: Lab on Combinational logic optimization
- ### :microscope: Lab-1: Observe and synthesize `opt*.v` files and observe optimization
+## :dart: Lab on GLS and `Synthesis-Simulation mismatch`
+ ### :microscope: Lab-1: Functional simulation of RTL design and GLS simulation (Test design: `ternary_operator_mux.v`)
    
-   :zap: Open the `opt*.v` files using text editor-
+   :zap: Open the `ternary_operator_mux.v` file using text editor (For viewing the code not for simulation)-
      
    ```
-   $ gvim opt*.v
+   $ gvim ternary_operator_mux.v 
    ```
-   ![opt_des](images/opt_des.png)
+   ![gls_des](images/gls_des.png)
 
-   :bulb: Each design is written in the behavioural manner of mux.
+   :bulb: Our aim is MUX, here one approach is shown using ternary operator.
    
-   :zap: Synthesize `opt_check.v` design-
+   :zap: Simulate `ternary_operator_mux.v`-
 
    ```
-   $ yosys
-   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   $ read_verilog opt_check.v
-   $ synth -top opt_check
-   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   $ show
-   ```
-   ![opt_1_synt](images/opt_1_synt.png)
-
-   :bulb: The design is optimized to an `and` gate.
-
-   :zap: Synthesize `opt_check2.v` design-
+   $ iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
+   $ ./a.out
+   $ gtkwave tb_ternary_operator_mux.vcd
 
    ```
-   $ yosys
-   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   $ read_verilog opt_check2.v
-   $ synth -top opt_check2
-   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   $ show
-   ```
-   ![opt_2_synt](images/opt_2_synt.png)
 
-   :bulb: The design is optimized to an `or` gate.
+   ![w1_te_mux](images/w1_te_mux.png)
 
-   :zap: Synthesize `opt_check3.v` design-
+   :bulb: Functional simulation shows that it is acting like a mux.
 
-   ```
-   $ yosys
-   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   $ read_verilog opt_check3.v
-   $ synth -top opt_check3
-   $ opt_clean -purge
-   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   $ show
-   ```
-   ![opt_3_synt](images/opt_3_synt.png)
-
-   :bulb: The design is optimized to an `3 input and` gate.
-
-   :zap: Synthesize `opt_check4.v` design-
-
-   ```
-   $ yosys
-   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   $ read_verilog opt_check4.v
-   $ synth -top opt_check4
-   $ opt_clean -purge
-   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   $ show
-   ```
-   ![opt_4_synt](images/opt_4_synt.png)
-
-   :bulb: The design is optimized to an `2 input xnor` gate and `b` input not used.
+   :zap: Synthesize `ternary_operator_mux.v` and generate netlist-
    
+   ```
+   $ yosys
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ read_verilog ternary_operator_mux.v
+   $ synth -top ternary_operator_mux.v
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ show
+   ```
+   ![s_te_mux](images/s_te_mux.png)
+
+   Generate netlist-
    
+   ```
+   $ write_verilog -noattr ternary_operator_mux_net.v
+   ```
+
+   :bulb: It is generated a `mux` cell.
+
+   :zap: Gate level simulation of `ternary_operator_mux.v`
+   
+    Give the netlist `ternary_operator_mux_net.v` ,premitive ,standard cells and the testbench used for RTL design case `tb_ternary_operator_mux.v` to iverilog  simulator-
+    
+   ```
+   $ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+   $ ./a.out
+   $ gtkwave tb_ternary_operator_mux.vcd
+
+   ```
+   ![w2_te_mux](images/w2_te_mux.png)
+
+   :white-check-mark: Here is no `Synthesis-simulation` mismatch.
      
   <div align="center">:star::star::star::star::star::star:</div> 
  
