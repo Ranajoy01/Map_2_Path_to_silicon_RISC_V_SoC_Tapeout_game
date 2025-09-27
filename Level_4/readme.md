@@ -329,7 +329,7 @@
 
 - All objectives completed.
 - I have learned about different combinational and sequential logic optimization during synthesis.
-- 🔓 Next level unlocked 🔜 [Level-5(Day-5): Gate level simulation,blocking vs non-blocking statement,synthesis-simulation mismatch](../Level_5/readme.md).
+- 🔓 Next level unlocked 🔜 [Level-5(Day-5): Optimization in synthesis (If,case,for,generate useage in verilog)](../Level_5/readme.md).
 
 
 
