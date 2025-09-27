@@ -136,7 +136,7 @@
 
    :bulb: All cases are present but all variables are not assigned in all cases.
 
-   :x: There were some eroors in the verilog file `tb_partial_case_assign.v`-
+   :x: There were some errors in the verilog file `tb_partial_case_assign.v`-
    
      - module name 
      - 'uut' name
