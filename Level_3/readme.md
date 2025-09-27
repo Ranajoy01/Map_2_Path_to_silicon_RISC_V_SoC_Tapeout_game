@@ -328,7 +328,7 @@
 ## :trophy: Level Status: 
 
 - All objectives completed.
-- I have learned about `.lib`, hierarchial vs flat synthesis , flop design, simulation, synthesis and some interseting optimization.
+- I have learned about different combinational and sequential logic optimization during synthesis.
 - 🔓 Next level unlocked 🔜 [Level-4(Day-4): Gate level simulation,blocking vs non-blocking statement,synthesis-simulation mismatch](../Level_4/readme.md).
 
 
