@@ -174,7 +174,7 @@
    $ write_verilog -noattr blocking_caveat_net.v
    ```
 
-   :bulb: It generated an `and` cell.
+   :bulb: It generated an `and` and an 'or' cell.
 
    :zap: Gate level simulation of `blocking_caveat.v`
    
