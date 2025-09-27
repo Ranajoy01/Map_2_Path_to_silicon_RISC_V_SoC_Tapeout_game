@@ -282,6 +282,26 @@ $ !gvim dff_syncres_net.v
 
 ![s_dff_sres_2](images/s_dff_sres_2.png)
 
+:zap: Synthesize `dff_async_set.v` using Yosys and SKY130 PDK-
+
+```
+$ yosys
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog dff_async_set.v
+$ synth -top dff_async_set
+$ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ show
+```
+
+![s_dff_aset_1](images/s_dff_aset_1.png)
+
+```
+$ write_verilog -noattr dff_async_set_net.v
+$ !gvim dff_async_set_net.v
+```
+
+![s_dff_aset_2](images/s_dff_aset.png)
 
 
    <div align="center">:star::star::star::star::star::star:</div> 
