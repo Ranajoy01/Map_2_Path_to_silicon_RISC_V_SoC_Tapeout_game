@@ -2,7 +2,7 @@
 
 ## List of Objectives
 
- - :book: <b>Theoratical Objective-1:</b> [`If` and `case` hardware generation theoratical](#dart-labs-on-incomplete-if-case-statement-and-overlapping-case
+ - :book: <b>Theoratical Objective-1:</b> [`If` and `case` hardware generation theoratical](#book-if-and-case-hardware-block-generation-theoratical)
  - :dart: <b>Practiccal Objective-1:</b> [Labs on incomplete `if`, 'case' statement and overlapping `case`](#dart-labs-on-incomplete-if-case-statement-and-overlapping-case
 )
    - :microscope: <b>Lab-1:</b> [Incomplete `if` statement issue](#microscope-lab-1incomplete-if-statement-issue
