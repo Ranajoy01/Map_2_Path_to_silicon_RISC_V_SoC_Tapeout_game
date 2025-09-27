@@ -9,7 +9,7 @@
  <div align="center">:star::star::star::star::star::star:</div> 
  
 ## :dart: Lab on GLS and `Synthesis-Simulation mismatch`
- ### :microscope: Lab-1: Functional simulation of RTL design and GLS simulation (Test design: `ternary_operator_mux.v`)
+ ### :microscope: Lab-1:`missing sensitivity list` Functional simulation of RTL design and GLS simulation (Test design: `ternary_operator_mux.v`)
    
    :zap: Open the `ternary_operator_mux.v` file using text editor (For viewing the code not for simulation)-
      
