@@ -325,8 +325,8 @@
 ## :trophy: Level Status: 
 
 - All objectives completed.
-- I have learned about Gate level simulation (GLS) and synthesis-simulation mismatch issues due to `missing sensitivity list` and `blocking statement ordering`.
-- 🔓 Next level unlocked 🔜 [Level-5(Day-5): Optimization in synthesis (If,case,for,generate useage in verilog)](../Level_5/readme.md).
+- I have learned about `if`, `case`, `for` and `for generate` constructs and their application. 
+- :white_check_mark: Map completed
 
 
 
