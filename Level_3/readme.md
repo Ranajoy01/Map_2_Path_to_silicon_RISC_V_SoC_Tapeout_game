@@ -178,8 +178,9 @@
   $ show
 
   ```
-  :buld: Here an asynchronous reset D flip-flop is generated with input `d` always `1'b1'.
-  :buld: It is not an example of `sequential constant` optimization.
+  :bulb: Here an asynchronous reset D flip-flop is generated with input `d` always `1'b1'.
+  
+  :bulb: It is not an example of `sequential constant` optimization.
  
   ### :microscope: Lab-6: Compare hierarchical and flat synthesis
   :zap: Hierarchial vs Flat netlist
