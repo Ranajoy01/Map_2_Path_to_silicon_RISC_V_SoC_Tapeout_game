@@ -64,35 +64,25 @@
      - There are different leakage power for different input combinations.
      - Area,power,capacitance are also present in the definition.
      
-  ![ana_lib_cell](images/ana_lib_cell.png)
-    
   ### :microscope: Lab-3: Compare area,power of variants of same cell
-  :zap: Open verilog files on gvim text editor ('-o' is used to open multiple files in same window)-
+  :zap: We have opened three different flavours of same cell using line number-
   ```
-  $ gvim good_mux.v tb_good_mux.v -o  
+  :36663
+  :vsp
+  :vsp
+  :36904
+  :37145
   ```
-  ![verilog_file_text](images/text_vim.png)
+  ![cell_comp](images/cell_comp.png)
   
-   :zap: Analysis of the design `good_mux.v`-
+   :zap: Compare three cells-
 
-   - It has `i0,i1,sel` three primary inputs.
-   - It has `y` as the primary output.
-   - Ports are declared after module keyword.
-   - `MUX functionality` is coded in the body (Inside module and endmodule).
+   - `and2_0`,`and2_1`,`and2_2` cells are opened.
+   - Area is increasing from `and2_0` to`and2_2`.
+   - Speed is increasing from `and2_0` to `and2_2`.
+   - Power is increasing from `and2_0` to `and2_2`.
   
-  :zap: Analysis of the testbench `tb_good_mux.v`-
-
-   - It has no primary inputs or primary outputs.
-   - Design 'good_mux' is instantiated in this testbench.
-   - Stimulus to the design are generated.
-   - Primary outputs from design under test `(DUT)` or unit under test `(UUT)` are dumped into `.vcd file` as per the variation of primary inputs to UUT.
-  
-  :zap: Edit file in gvim text editor-
-
-   - Press `i` to enter into the `insert` mode
-   - Press `Esc` to enter into the `normal` mode
-   - `:w` for saving the file
-<div align="center">:star::star::star::star::star::star:</div> 
+  <div align="center">:star::star::star::star::star::star:</div> 
  
 ## :book: Introduction to Yosys and Logic synthesis
 
