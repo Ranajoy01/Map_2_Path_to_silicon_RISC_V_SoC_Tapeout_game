@@ -135,7 +135,20 @@
    ![c_des_2](images/c_des_2.png)
 
    :bulb: All cases are present but all variables are not assigned in all cases.
+
+   :x: There were some eroors in the verilog file `tb_partial_case_assign.v`-
    
+     - module name 
+     - 'uut' name
+     - `i3` port is not present in `uut`.
+     - `sel` is two bit line not 1 bit.
+     - dumpfile name
+     
+   :white_check_box:  Fixed version of `tb_partial_case_assign.v`.
+
+   ![fix_tb_par](images/fix_tb_par.png)
+
+
    :zap: Simulate `partial_case_assign.v`-
 
    ```
