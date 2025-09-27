@@ -51,7 +51,7 @@
    $ write_verilog -noattr ternary_operator_mux_net.v
    ```
 
-   :bulb: It is generated a `mux` cell.
+   :bulb: It generated a `mux` cell.
 
    :zap: Gate level simulation of `ternary_operator_mux.v`
    
@@ -110,7 +110,7 @@
    $ write_verilog -noattr bad_mux_net.v
    ```
 
-   :bulb: It is generated a `mux` cell.
+   :bulb: It generated a `mux` cell.
 
    :zap: Gate level simulation of `bad_mux.v`
    
