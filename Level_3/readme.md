@@ -92,15 +92,6 @@
 
    :bulb: The design is optimized to an `2 input xnor` gate and `b` input not used.
    
-   :zap: Significance of the filename-
-
-   - Based on process, voltage and temperature variation cell performance changes.
-   - The performance of cells in `.lib` file are generalized in certain values of these three parameters.
-   - We can observe the parameters in the name of `.lib` file.
-   -  For the `sky130_fd_sc_hd__tt_025C_1v80.lib` file-
-      - Process: `tt` (Typical pocess).
-      - Voltage: `1v80` (1.80 V).
-      - Temparature: `025C` (25 degree celcius).
    
   ### :microscope: Lab-2: Observe Cell definition, parameters
   :zap: Cell names can be seen using the following command-
