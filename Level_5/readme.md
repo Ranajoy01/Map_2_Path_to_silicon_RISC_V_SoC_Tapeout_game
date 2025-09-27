@@ -15,7 +15,7 @@
 )
    - :microscope: <b>Lab-4:</b>[Advantages of `for loop` over `case` statement](#microscope-lab-4-advantages-of-for-loop-over-case-statement-test-design-demux_generatev-and-demux_casev
 )
-   - :microscope: <b>Lab-4:</b>[Introduction to `for generate`](#microscope-lab-5-introduction-to-for-generate)
+   - :microscope: <b>Lab-5:</b>[Introduction to `for generate`](#microscope-lab-5-introduction-to-for-generate)
         
  <div align="center">:star::star::star::star::star::star:</div> 
  
