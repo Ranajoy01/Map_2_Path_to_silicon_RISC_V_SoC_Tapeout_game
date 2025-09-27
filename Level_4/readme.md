@@ -3,9 +3,11 @@
 
 ## List of Objectives
 
- - :dart: <b>Practiccal Objective-1:</b> [Lab on GLS and `Synthesis-Simulation mismatch`]()
-   - :microscope: <b>Lab-1:</b> [`Missing sensitivity list issue` Functional simulation of RTL design and GLS simulation]()
-   - :microscope: <b>Lab-2:</b> [`Blocking statement issue` Functional simulation of RTL design and GLS simulation]()
+ - :dart: <b>Practiccal Objective-1:</b> [Lab on GLS and `Synthesis-Simulation mismatch`](#dart-lab-on-gls-and-synthesis-simulation-mismatch
+)
+   - :microscope: <b>Lab-1:</b> [`Missing sensitivity list issue` Functional simulation of RTL design and GLS simulation](#microscope-lab-1missing-sensitivity-list-issue-functional-simulation-of-rtl-design-and-gls-simulation-test-design-ternary_operator_muxv
+)
+   - :microscope: <b>Lab-2:</b> [`Blocking statement issue` Functional simulation of RTL design and GLS simulation](#microscope-lab-2blocking-statement-issue-functional-simulation-of-rtl-design-and-gls-simulation-test-design-blocking_caveatv)
      
  <div align="center">:star::star::star::star::star::star:</div> 
  
