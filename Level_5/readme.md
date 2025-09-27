@@ -293,7 +293,7 @@
 
    ![w_f2](images/w_f2.png)
 
-  :bulb:  It is acting like a mux.
+  :bulb:  It is acting like a demux.
 
   ---
 
@@ -315,7 +315,7 @@
 
    ![w_f3](images/w_f3.png)
 
-  :bulb:  It is acting like a mux.
+  :bulb:  It is acting like a demux.
 
   :bulb: Use `for` loop over `case` to design large Demux.
   
