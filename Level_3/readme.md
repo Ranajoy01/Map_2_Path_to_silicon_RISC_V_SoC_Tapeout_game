@@ -93,94 +93,76 @@
    :bulb: The design is optimized to an `2 input xnor` gate and `b` input not used.
    
    
-  ### :microscope: Lab-2: Observe Cell definition, parameters
-  :zap: Cell names can be seen using the following command-
-   ```
-   /cell+ space key
-   :g//
-   ```
-   ![lib_cell](images/lib_cell.png)
-
-  :zap: Now we can check any cell's line number and go to that cell definition-
-  ```
-  :
-  ```
-  ![lib_cell_1](images/lib_cell_1.png)
-  
-  :zap: Analyze the cell parameters-
-  
-   - There are different leakage power for different input combinations.
-   - Area,power,capacitance are also present in the definition.
-     
-  ### :microscope: Lab-3: Compare area,power of variants of same cell
-  :zap: We have opened three different flavours of same cell using line number-
-  ```
-  :36663
-  :vsp
-  :vsp
-  :36904
-  :37145
-  ```
-  ![cell_comp](images/cell_comp.png)
-  
-   :zap: Compare three cells-
-
-   - `and2_0`,`and2_1`,`and2_2` cells are opened.
-   - Area is increasing from `and2_0` to`and2_2`.
-   - Speed is increasing from `and2_0` to `and2_2`.
-   - Power is increasing from `and2_0` to `and2_2`.
      
   <div align="center">:star::star::star::star::star::star:</div> 
  
 ## :dart: Lab on Sequential logic optimization
- ### :microscope: Lab-4: Observe the designs `dff_cons*.v`
+ ### :microscope: Lab-2: Observe the designs `dff_cons*.v`
    
   :zap: Open the designs `dff_cons*.v` using text editor-
   
    ```
-   $ gvim opt*.v
+   $ gvim dff_cons*.v
    ```
    ![opt_dff_des](images/opt_dff_des.png)
    
-   ```
-  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ read_verilog multiple_modules.v
-  $ synth -top multiple_modules
-  ```
-  ![hier_synth_1](images/hier_synth_1.png)
-  
-  ```
-  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ show
-  ```
-  ![hier_synth_2](images/hier_synth_2.png)
-
-  ```
-  $ write_verilog multiple_modules_net.v 
-  ```
-
-   ![hier_net_v](images/hier_net_v.png)
+   :bulb: Here we have to find the `sequential constant` cases.
+   ### :microscope: Lab-3: Simulate the designs `dff_cons*.v`
    
-   ### :microscope: Lab-5: Flat synthesis
-   
-  :zap: Synthesize `multiple_modules.v` as flatten-
+  :zap: Simulate design `dff_const1.v` using iverilog-
      
    ```
-  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ read_verilog multiple_modules.v
-  $ synth -top multiple_modules
-  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ flatten
-  $ show
+  $ iverilog dff_const1.v tb_dff_const1.v
+  $ ./a.out
+  $ gtkwave tb_dff_const1.vcd
   ```
-  ![flat_synth_1](images/flat_synth_1.png)
+  ![w_dff_con_1](images/w_dff_con_1.png)
 
-  ```
-  $ write_verilog multiple_modules_flat.v 
-  ```
+  :bulb: Output `q` is changing. It is not an example of sequential constant.
 
-   ![flat_net](images/flat_net.png)
-   
+  :zap: Simulate design `dff_const2.v` using iverilog-
+     
+   ```
+  $ iverilog dff_const2.v tb_dff_const2.v
+  $ ./a.out
+  $ gtkwave tb_dff_const2.vcd
+  ```
+  ![w_dff_con_2](images/w_dff_con_2.png)
+
+  :bulb: Output `q` is not changing. It is an example of sequential constant.
+
+  :zap: Simulate design `dff_const3.v` using iverilog-
+     
+   ```
+  $ iverilog dff_const3.v tb_dff_const3.v
+  $ ./a.out
+  $ gtkwave tb_dff_const3.vcd
+  ```
+  ![w_dff_con_3](images/w_dff_con_3.png)
+
+  :bulb: Output `q` is changing. It is not an example of sequential constant.
+
+  :zap: Simulate design `dff_const4.v` using iverilog-
+     
+   ```
+  $ iverilog dff_const4.v tb_dff_const4.v
+  $ ./a.out
+  $ gtkwave tb_dff_const4.vcd
+  ```
+  ![w_dff_con_4](images/w_dff_con_4.png)
+
+  :bulb: Output `q` is not changing. It is an example of sequential constant.
+
+  :zap: Simulate design `dff_const5.v` using iverilog-
+     
+   ```
+  $ iverilog dff_const5.v tb_dff_const5.v
+  $ ./a.out
+  $ gtkwave tb_dff_const5.vcd
+  ```
+  ![w_dff_con_5](images/w_dff_con_5.png)
+
+  :bulb: Output `q` is changing. It is not an example of sequential constant.
  
   ### :microscope: Lab-6: Compare hierarchical and flat synthesis
   :zap: Hierarchial vs Flat netlist
