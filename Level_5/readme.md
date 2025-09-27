@@ -11,7 +11,7 @@
 
  - :dart: <b>Practiccal Objective-2:</b> [Labs on `for` loop and `for generate`](#dart-labs-on-for-loop-and-for-generate
 )
-   - :microscope: <b>Lab-3:</b> [Introduction to `for` loop](#microscope-lab-4-advantages-of-for-loop-over-case-statement-test-design-demux_generatev-and-demux_casev
+   - :microscope: <b>Lab-3:</b> [Introduction to `for` loop](#microscope-lab-3-introduction-to-for-loop-test-design-mux_generatev-
 )
    - :microscope: <b>Lab-4:</b>[Advantages of `for loop` over `case` statement](#microscope-lab-4-advantages-of-for-loop-over-case-statement-test-design-demux_generatev-and-demux_casev
 )
