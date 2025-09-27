@@ -171,16 +171,58 @@
   ```
   $ yosys
   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ read_verilog dff_const5.v
-  $ synth -top dff_const5
+  $ read_verilog dff_const1.v
+  $ synth -top dff_const1
   $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   $ show
 
   ```
+
+  ![s_dff_con_1](images/s_dff_con_1.png)
+  
   :bulb: Here an asynchronous reset D flip-flop is generated with input `d` always `1'b1'.
   
   :bulb: It is not an example of `sequential constant` optimization.
+
+  :zap: Synthesize the design `dff_cont2.v` using Yosys and SKY130 PDK-
+  
+  ```
+  $ yosys
+  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ read_verilog dff_const2.v
+  $ synth -top dff_const2
+  $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ show
+
+  ```
+
+  ![s_dff_con_2](images/s_dff_con_2.png)
+  
+  :bulb: Here an asynchronous reset D flip-flop is generated with input `d` always `1'b0'.
+  
+  :bulb: It is an example of `sequential constant` optimization.
+
+  :zap: Synthesize the design `dff_cont3.v` using Yosys and SKY130 PDK-
+  
+  ```
+  $ yosys
+  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ read_verilog dff_const3.v
+  $ synth -top dff_const3
+  $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ show
+
+  ```
+
+  ![s_dff_con_3](images/s_dff_con_3.png)
+  
+  :bulb: Here an asynchronous reset D flip-flop is generated with input `d` always `1'b1'.
+  
+  :bulb: It is not an example of `sequential constant` optimization.
+
  
   ### :microscope: Lab-6: Compare hierarchical and flat synthesis
   :zap: Hierarchial vs Flat netlist
