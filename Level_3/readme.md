@@ -132,11 +132,16 @@
      
   <div align="center">:star::star::star::star::star::star:</div> 
  
-## :dart: Lab on Hierarchial vs Flatten synthesis
- ### :microscope: Lab-4: Hierarchial synthesis
+## :dart: Lab on Sequential logic optimization
+ ### :microscope: Lab-4: Observe the designs `dff_cons*.v`
    
-  :zap: Synthesize `multiple_modules.v` as hierarchial-
-     
+  :zap: Open the designs `dff_cons*.v` using text editor-
+  
+   ```
+   $ gvim opt*.v
+   ```
+   ![opt_dff_des](images/opt_dff_des.png)
+   
    ```
   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   $ read_verilog multiple_modules.v
