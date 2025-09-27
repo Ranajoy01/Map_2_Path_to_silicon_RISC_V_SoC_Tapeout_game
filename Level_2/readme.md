@@ -321,6 +321,30 @@ $ show
 
 ![mult_2_synt](images/mult_2_synt.png)
 
+:bulb: No harfware block generated
+
+:bulb: 3 bit number multipliesd with 2 results 4 bit number first three bits from MSB of result is same as 3 bit number and LSB is zero.
+
+:zap: `mult_8.v` design -
+
+![mult_8_des](images/mult_8_des.png)
+
+:zap: Synthesize `mult_8.v` and observe the optimization-
+
+```
+$ yosys
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog mult_8.v
+$ synth -top mul8
+$ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ show
+```
+
+![mult_8_synt](images/mult_8_synt.png)
+
+:bulb: No harfware block generated
+
+:bulb: 3 bit number multipliesd with 2 results 4 bit number first three bits from MSB of result is same as 3 bit number and LSB is zero.
 
 
    <div align="center">:star::star::star::star::star::star:</div> 
