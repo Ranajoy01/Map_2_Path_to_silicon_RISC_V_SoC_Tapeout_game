@@ -9,7 +9,7 @@
  <div align="center">:star::star::star::star::star::star:</div> 
  
 ## :dart: Lab on GLS and `Synthesis-Simulation mismatch`
- ### :microscope: Lab-1:`missing sensitivity list` Functional simulation of RTL design and GLS simulation (Test design: `ternary_operator_mux.v`)
+ ### :microscope: Lab-1:`Missing sensitivity list issue` Functional simulation of RTL design and GLS simulation (Test design: `ternary_operator_mux.v`)
    
    :zap: Open the `ternary_operator_mux.v` file using text editor (For viewing the code not for simulation)-
      
@@ -128,6 +128,69 @@
    :x: Here is `Synthesis-simulation` mismatch.
 
    :bulb: Due to `missing sensitivity list` issue in procedural block this occurs.
+   
+ ### :microscope: Lab-1:`Blocking statement issue issue` Functional simulation of RTL design and GLS simulation (Test design: `blocking_caveat.v`)
+   
+   :zap: Open the `blocking_caveat.v` file using text editor (For viewing the code not for simulation)-
+     
+   ```
+   $ gvim blocking_caveat.v 
+   ```
+   ![gls_des_2](images/gls_des_2.png)
+
+   :bulb:
+   
+   :zap: Simulate `blocking_caveat.v`-
+
+   ```
+   $ iverilog blocking_caveat.v tb_blocking_caveat.v
+   $ ./a.out
+   $ gtkwave tb_blocking_caveat.vcd
+
+   ```
+
+   ![w1_bc](images/w1_bc.png)
+
+   :bulb: Functional simulation shows that it is not acting like intended.
+
+   :zap: Synthesize `blocking_caveat.v` and generate netlist-
+   
+   ```
+   $ yosys
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ read_verilog blocking_caveat.v
+   $ synth -top blocking_caveat
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ show
+   ```
+   ![s_bc](images/s_bc.png)
+
+   Generate netlist-
+   
+   ```
+   $ write_verilog -noattr blocking_caveat_net.v
+   ```
+
+   :bulb: It generated an `and` cell.
+
+   :zap: Gate level simulation of `blocking_caveat.v`
+   
+   
+ Give the netlist `blocking_caveat_net.v` ,premitive ,standard cells and the testbench used for RTL design case `tb_blocking_caveat.v` to iverilog simulator-
+    
+   ```
+   $ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
+   $ ./a.out
+   $ gtkwave tb_blocking_caveat.vcd
+
+   ```
+   ![w2_bc](images/w2_bc.png)
+
+   :x: Here is no `Synthesis-simulation` mismatch.
+   
+   :bulb: This mismatch is caused by `blocking statement ordereing issue`.
+  
+   
    
   <div align="center">:star::star::star::star::star::star:</div> 
  
