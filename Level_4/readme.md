@@ -55,7 +55,8 @@
 
    :zap: Gate level simulation of `ternary_operator_mux.v`
    
-    Give the netlist `ternary_operator_mux_net.v` ,premitive ,standard cells and the testbench used for RTL design case `tb_ternary_operator_mux.v` to iverilog  simulator-
+   
+ Give the netlist `ternary_operator_mux_net.v` ,premitive ,standard cells and the testbench used for RTL design case `tb_ternary_operator_mux.v` to iverilog simulator-
     
    ```
    $ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
@@ -65,7 +66,7 @@
    ```
    ![w2_te_mux](images/w2_te_mux.png)
 
-   :white-check-mark: Here is no `Synthesis-simulation` mismatch.
+   :white_check_mark: Here is no `Synthesis-simulation` mismatch.
      
   <div align="center">:star::star::star::star::star::star:</div> 
  
