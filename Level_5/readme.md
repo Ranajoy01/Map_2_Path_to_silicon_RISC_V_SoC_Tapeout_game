@@ -1,24 +1,22 @@
-# Level-4(Day-4): Optimization in synthesis (If,case,for,generate useage in verilog)
+# Level-5(Day-5): Optimization in synthesis (If,case,for,generate useage in verilog)
 
 ## List of Objectives
 
- - :dart: <b>Practiccal Objective-1:</b> [Lab on GLS and `Synthesis-Simulation mismatch`](#dart-lab-on-gls-and-synthesis-simulation-mismatch
-)
-   - :microscope: <b>Lab-1:</b> [`Missing sensitivity list issue` Functional simulation of RTL design and GLS simulation](#microscope-lab-1missing-sensitivity-list-issue-functional-simulation-of-rtl-design-and-gls-simulation-test-design-ternary_operator_muxv
-)
-   - :microscope: <b>Lab-2:</b> [`Blocking statement issue` Functional simulation of RTL design and GLS simulation](#microscope-lab-2blocking-statement-issue-functional-simulation-of-rtl-design-and-gls-simulation-test-design-blocking_caveatv)
+ - :dart: <b>Practiccal Objective-1:</b> []()
+   - :microscope: <b>Lab-1:</b> []()
+   - :microscope: <b>Lab-2:</b>[]()
      
  <div align="center">:star::star::star::star::star::star:</div> 
  
-## :dart: Lab on GLS and `Synthesis-Simulation mismatch`
- ### :microscope: Lab-1:`Missing sensitivity list issue` Functional simulation of RTL design and GLS simulation (Test design: `ternary_operator_mux.v`)
+## :dart: Labs on incomplete `if`, 'case' statement and overlapping `case`
+ ### :microscope: Lab-1:Incomplete `if` statement issue
    
-   :zap: Open the `ternary_operator_mux.v` file using text editor (For viewing the code not for simulation)-
+   :zap: Open the `incomp_if.v` file using text editor (For viewing the code not for simulation)-
      
    ```
-   $ gvim ternary_operator_mux.v 
+   $ gvim incomp_if.v 
    ```
-   ![gls_des](images/gls_des.png)
+   ![if_des](images/if_des.png)
 
    :bulb: Our aim is MUX, here one approach is shown using ternary operator.
    
