@@ -18,7 +18,7 @@
    ```
    ![if_des](images/if_des.png)
 
-   :bulb: 
+   :bulb: `Else` statemet missing.
    
    :zap: Simulate `incomp_if.v`-
 
@@ -50,8 +50,6 @@
    ```
    $ write_verilog -noattr incomp_if_net.v
    ```
-
-   :bulb: 
 
    :zap: Gate level simulation of `incomp_if.v`
    
