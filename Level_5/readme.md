@@ -345,6 +345,24 @@
 
   :bulb:  8 full adder (`fa.v`) are instantiated to design ripple cary adder (`rca.v`).
 
+   :zap: Synthesize `rca.v` -
+   
+   ```
+   $ yosys
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ read_verilog rca.v fa.v
+   $ synth -top rca
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ show
+   ```
+   ![s_g1](images/s_g1.png)
+
+   ```
+   $ flatten
+   $show
+   ```
+   ![s_g2](images/s_g2.png)
+
    <div align="center">:star::star::star::star::star::star:</div> 
    
 ## :trophy: Level Status: 
