@@ -2,18 +2,25 @@
 
 ## List of Objectives
 
-- :dart: <b>Practiccal Objective-1:</b> [Lab on Combinational logic optimization]()
-   - :microscope: <b>Lab-1:</b> [Observe and synthesize `opt*.v` files and observe optimization]()
-    
-
-- :dart: <b>Practical Objective-3:</b> [Lab on Sequential logic optimization (`Sequential constant`)]()
-    - :microscope: <b>Lab-2:</b> [Observe the designs `dff_cons*.v`]()
-    - :microscope: <b>Lab-3:</b> [Simulate the designs `dff_cons*.v`]()
-    - :microscope: <b>Lab-4:</b> [Synthesize the designs `dff_cons*.v` and observe optimizations]()
+- :dart: <b>Practiccal Objective-1:</b> [Lab on Combinational logic optimization](#dart-lab-on-combinational-logic-optimization
+)
+   - :microscope: <b>Lab-1:</b> [Observe and synthesize `opt*.v` files and observe optimization](#microscope-lab-1-observe-and-synthesize-optv-files-and-observe-optimization
+)
+- :dart: <b>Practical Objective-3:</b> [Lab on Sequential logic optimization (`Sequential constant`)](#dart-lab-on-sequential-logic-optimization-sequential-constant
+)
+    - :microscope: <b>Lab-2:</b> [Observe the designs `dff_cons*.v`](#microscope-lab-2-observe-the-designs-dff_consv
+)
+    - :microscope: <b>Lab-3:</b> [Simulate the designs `dff_cons*.v`](#microscope-lab-3-simulate-the-designs-dff_consv
+)
+    - :microscope: <b>Lab-4:</b> [Synthesize the designs `dff_cons*.v` and observe optimizations](#microscope-lab-4-synthesize-the-designs-dff_consv-and-observe-optimizations
+)
  
-- :dart: <b>Practical Objective-3:</b> [Lab on Sequential logic optimization (`Sequential unused output`)]()
-    - :microscope: <b>Lab-5:</b> [Observe the designs `counter_opt*.v`]()
-    - :microscope: <b>Lab-6:</b> [Synthesize the designs `counter_opt*.v` and observe optimizations]()
+- :dart: <b>Practical Objective-3:</b> [Lab on Sequential logic optimization (`Sequential unused output`)](#dart-lab-on-sequential-logic-optimization-sequential-unused-output
+)
+    - :microscope: <b>Lab-5:</b> [Observe the designs `counter_opt*.v`](#microscope-lab-5-observe-the-designs-counter_optv
+)
+    - :microscope: <b>Lab-6:</b> [Synthesize the designs `counter_opt*.v` and observe optimizations](#microscope-lab-6-synthesize-the-designs-counter_optv-and-observe-optimizations
+)
       
  <div align="center">:star::star::star::star::star::star:</div> 
  
