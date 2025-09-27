@@ -24,7 +24,7 @@
 
 :bulb: For the following `if` statement multiple 2:1 muxes are generated-
 
-```
+```verilog
  if(a)
    y=i0;
  else if(b)
