@@ -166,7 +166,20 @@
 
   ### :microscope: Lab-3: Synthesize the designs `dff_cons*.v` and observe optimizations
   
-  :zap:
+  :zap: Synthesize the design `dff_cont1.v` using Yosys and SKY130 PDK-
+  
+  ```
+  $ yosys
+  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ read_verilog dff_const5.v
+  $ synth -top dff_const5
+  $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ show
+
+  ```
+  :buld: Here an asynchronous reset D flip-flop is generated with input `d` always `1'b1'.
+  :buld: It is not an example of `sequential constant` optimization.
  
   ### :microscope: Lab-6: Compare hierarchical and flat synthesis
   :zap: Hierarchial vs Flat netlist
