@@ -127,7 +127,7 @@
   $ write_verilog multiple_modules_flat.v 
   ```
 
-   ![flat_net](images/flat_net_v.png)
+   ![flat_net](images/flat_net.png)
    
  
   ### :microscope: Lab-3: Compare hierarchical and flat synthesis
@@ -138,7 +138,7 @@
    :sp multiple_modules_flat.v
    :exit
    ```
-   ![comp_flat_hier](images/comp_hier_flat.png)
+   ![comp_flat_hier](images/comp_flat_hier.png)
 
   :bulb: Significance of `synth -top`-
 
