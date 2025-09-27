@@ -22,15 +22,15 @@
 
  <div align="center">:star::star::star::star::star::star:</div> 
  
-## :dart: Lab for introduction to timing.lib
+## :dart: Lab on Combinational logic optimization
  ### :microscope: Lab-1: Open the library file , significance of the filename.
    
-   :zap: Open the `.lib` file using text editor-
+   :zap: Open the `opt*.v` files using text editor-
      
    ```
-   $ gvim sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ gvim opt*.v
    ```
-   ![lib_vim_1](images/lib_vim_1.png)
+   ![opt_des](images/opt_des.png)
    
    :zap: Go to the command line mode in gvim text editor by pressing `:` -
 
@@ -351,7 +351,7 @@ $ show
 
 - All objectives completed.
 - I have learned about `.lib`, hierarchial vs flat synthesis , flop design, simulation, synthesis and some interseting optimization.
-- 🔓 Next level unlocked 🔜 [Level-3(Day-3): Combinational and sequential optimization](../Level_4/readme.md).
+- 🔓 Next level unlocked 🔜 [Level-4(Day-4): Gate level simulation,blocking vs non-blocking statement,synthesis-simulation mismatch](../Level_4/readme.md).
 
 
 
