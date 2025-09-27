@@ -2,15 +2,14 @@
 
 ## List of Objectives
 
-- :dart: <b>Practiccal Objective-1:</b> []()
-   - :microscope: <b>Lab-1:</b> []()
-   - :microscope: <b>Lab-2:</b> []()
-   - :microscope: <b>Lab-3:</b> []()
+- :dart: <b>Practiccal Objective-1:</b> [Lab on Combinational logic optimization]()
+   - :microscope: <b>Lab-1:</b> [Observe and synthesize `opt*.v` files and observe optimization]()
+    
 
 - :dart: <b>Practical Objective-3:</b> []()
-    - :microscope: <b>Lab-4:</b> []()
-
-    - :microscope: <b>Lab-5:</b> []()
+    - :microscope: <b>Lab-2:</b> [Observe the designs `dff_cons*.v`]()
+    - :microscope: <b>Lab-3:</b> [Simulate the designs `dff_cons*.v`]()
+    - :microscope: <b>Lab-4:</b> [Synthesize the designs `dff_cons*.v` and observe optimizations]()
 
     - :microscope: <b>Lab-6:</b> []()
  
@@ -23,7 +22,7 @@
  <div align="center">:star::star::star::star::star::star:</div> 
  
 ## :dart: Lab on Combinational logic optimization
- ### :microscope: Lab-1: Open the library file , significance of the filename.
+ ### :microscope: Lab-1: Observe and synthesize `opt*.v` files and observe optimization
    
    :zap: Open the `opt*.v` files using text editor-
      
@@ -164,7 +163,7 @@
 
   :bulb: Output `q` is changing. It is not an example of sequential constant.
 
-  ### :microscope: Lab-3: Synthesize the designs `dff_cons*.v` and observe optimizations
+  ### :microscope: Lab-4: Synthesize the designs `dff_cons*.v` and observe optimizations
   
   :zap: Synthesize the design `dff_cont1.v` using Yosys and SKY130 PDK-
   
