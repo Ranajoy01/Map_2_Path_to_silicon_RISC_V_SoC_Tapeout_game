@@ -78,7 +78,7 @@
    ```
    $ gvim bad_mux.v 
    ```
-   ![gls_des_1](images/gls_des_1.png)
+   ![gls_des_1](images/gld_des_1.png)
 
    :bulb: Our aim is MUX, here one approach is shown using procedural block.
    
