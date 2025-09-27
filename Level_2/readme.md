@@ -127,7 +127,7 @@
   $ write_verilog multiple_modules_flat.v 
   ```
 
-   ![flat_net_v](images/flat_net_v.png)
+   ![flat_net](images/flat_net_v.png)
    
  
   ### :microscope: Lab-3: Compare hierarchical and flat synthesis
@@ -138,7 +138,7 @@
    :sp multiple_modules_flat.v
    :exit
    ```
-   ![comp_hier_flat](images/comp_hier_flat.png)
+   ![comp_flat_hier](images/comp_hier_flat.png)
 
   :bulb: Significance of `synth -top`-
 
@@ -301,7 +301,7 @@ $ write_verilog -noattr dff_async_set_net.v
 $ !gvim dff_async_set_net.v
 ```
 
-![s_dff_aset_2](images/s_dff_aset.png)
+![s_dff_aset_2](images/s_dff_aset_2.png)
 
 ### :microscope: Lab-7: Interesting synthesis optimization (No haedware block generate)
 :zap: `mult_2.v` design -
