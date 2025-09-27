@@ -209,9 +209,81 @@ $ iverilog dff_asyncres.v tb_dff_asyncres.v
 $ ./a.out
 $ gtkwave tb_dff_asyncres.vcd
 ```
-1[w_dff_ares](images/w_dff_ares.png)
+![w_dff_ares](images/w_dff_ares.png)
+
+:zap: Simulate `dff_syncres.v` using iverilog-
+
+```
+$ iverilog dff_syncres.v tb_dff_syncres.v
+$ ./a.out
+$ gtkwave tb_dff_syncres.vcd
+```
+![w_dff_sres](images/w_dff_sres.png)
+
+:zap: Simulate `dff_async_set.v` using iverilog-
+
+```
+$ iverilog dff_async_set.v tb_dff_async_set.v
+$ ./a.out
+$ gtkwave tb_dff_async_set.vcd
+```
+![w_dff_aset](images/w_dff_aset.png)
 
 ### :microscope: Lab-6: Synthesize different flip-flop designs   
+:zap: Synthesize `dff_asyncres.v` using Yosys and SKY130 PDK-
+
+```
+$ yosys
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog dff_asyncres.v
+$ synth -top dff_asyncres
+```
+
+![s_dff_ares_1](images/s_dff_ares_1.png)
+
+```
+$ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+![s_dff_ares_2](images/s_dff_ares_2.png)
+
+```
+$ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ show
+```
+
+![s_dff_ares_3](images/s_dff_ares_3.png)
+
+```
+$ write_verilog -noattr dff_asyncres_net.v
+$ !gvim dff_asyncres_net.v
+```
+
+![s_dff_ares_4](images/s_dff_ares_4.png)
+
+:zap: Synthesize `dff_syncres.v` using Yosys and SKY130 PDK-
+
+```
+$ yosys
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog dff_syncres.v
+$ synth -top dff_syncres
+$ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ show
+```
+
+![s_dff_sres_1](images/s_dff_sres_1.png)
+
+```
+$ write_verilog -noattr dff_syncres_net.v
+$ !gvim dff_syncres_net.v
+```
+
+![s_dff_sres_2](images/s_dff_sres_2.png)
+
+
+
    <div align="center">:star::star::star::star::star::star:</div> 
    
 ## :trophy: Level Status: 
