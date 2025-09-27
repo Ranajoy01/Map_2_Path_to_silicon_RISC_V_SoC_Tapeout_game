@@ -60,7 +60,7 @@
    ```
    ![opt_2_synt](images/opt_2_synt.png)
 
-   :bulb: The design is optimized to an `and` gate.
+   :bulb: The design is optimized to an `or` gate.
 
    :zap: Synthesize `opt_check3.v` design-
 
@@ -75,7 +75,7 @@
    ```
    ![opt_3_synt](images/opt_3_synt.png)
 
-   :bulb: The design is optimized to an `and` gate.
+   :bulb: The design is optimized to an `3 input and` gate.
 
    :zap: Synthesize `opt_check4.v` design-
 
@@ -90,7 +90,7 @@
    ```
    ![opt_4_synt](images/opt_4_synt.png)
 
-   :bulb: The design is optimized to an `and` gate.
+   :bulb: The design is optimized to an `2 input xnor` gate and `b` input not used.
    
    :zap: Significance of the filename-
 
