@@ -145,6 +145,7 @@
   - If a submodule is instantiated multiple times the multiple time synthesis of same submodule is problematic.
   - We can synthesize submodule one time and use this multiple time.
   - This is the significance of `synth -top`-
+    
     ```
     synth -top `submodule_name`
     ```
