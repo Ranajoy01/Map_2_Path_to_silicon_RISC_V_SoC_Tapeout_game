@@ -29,11 +29,11 @@
 
    ```
 
-   ![w1_if1_1](images/w1_if1_1.png)
+   ![w_if1](images/w_if1.png)
 
   :bulb:  `Inferred latch` behaviour is observed due to incomplete `if` statement.
 
-   :zap: Synthesize `incomp_if.v` and generate netlist-
+   :zap: Synthesize `incomp_if.v`-
    
    ```
    $ yosys
@@ -49,65 +49,43 @@
    
   ---
 
-  :zap: Open the `bad_mux.v` file using text editor (For viewing the code not for simulation)-
+  :zap: Open the `incomp_if2.v` file using text editor (For viewing the code not for simulation)-
      
    ```
-   $ gvim bad_mux.v 
+   $ gvim incomp_if2.v 
    ```
-   ![gls_des_1](images/gls_des_1.png)
+   ![if_des_1](images/if_des_1.png)
 
-   :bulb: Our aim is MUX, here one approach is shown using procedural block.
+   :bulb: `If` and `else if` statement present but `else` statement missing.
    
-   :zap: Simulate `bad_mux.v`-
+   :zap: Simulate `incomp_if2.v`-
 
    ```
-   $ iverilog bad_mux.v tb_bad_mux.v
+   $ iverilog incomp_if2.v tb_incomp_if2.v
    $ ./a.out
-   $ gtkwave tb_bad_mux.vcd
+   $ gtkwave tb_incomp_if2.vcd
 
    ```
 
-   ![w1_bm](images/w1_bm.png)
+   ![w_if2](images/w_if2.png)
 
-   :bulb: Functional simulation shows that it is not acting like a mux.
+  :bulb:  `Inferred latch` behaviour is observed due to incomplete `if` statement.
 
-   :zap: Synthesize `bad_mux.v` and generate netlist-
+   :zap: Synthesize `incomp_if2.v`-
    
    ```
    $ yosys
    $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   $ read_verilog bad_mux.v
-   $ synth -top bad_mux
+   $ read_verilog incomp_if2.v
+   $ synth -top incomp_if2
    $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    $ show
    ```
-   ![s_bm](images/s_bm.png)
+   ![s_if2](images/s_if2.png)
 
-   Generate netlist-
+  :bulb: A `latch` is generated instead of a `mux`.
    
-   ```
-   $ write_verilog -noattr bad_mux_net.v
-   ```
-
-   :bulb: It generated a `mux` cell.
-
-   :zap: Gate level simulation of `bad_mux.v`
-   
-   
- Give the netlist `bad_mux_net.v` ,premitive ,standard cells and the testbench used for RTL design case `tb_bad_mux.v` to iverilog simulator-
-    
-   ```
-   $ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
-   $ ./a.out
-   $ gtkwave tb_bad_mux.vcd
-
-   ```
-   ![w2_bm](images/w2_bm.png)
-
-   :x: Here is `Synthesis-simulation` mismatch.
-
-   :bulb: Due to `missing sensitivity list` issue in procedural block this occurs.
-   
+  
  ### :microscope: Lab-2:`Blocking statement issue` Functional simulation of RTL design and GLS simulation (Test design: `blocking_caveat.v`)
    
    :zap: Open the `blocking_caveat.v` file using text editor (For viewing the code not for simulation)-
