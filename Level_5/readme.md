@@ -92,7 +92,7 @@
    ```
    $ gvim incomp_case.v 
    ```
-   ![c_des1](images/c_des1.png)
+   ![c_des_1](images/c_des_1.png)
 
    :bulb: All cases are not present.
    
@@ -124,7 +124,88 @@
   :bulb: Output is `latched` for unassigned `cases`.
   
   :warning: Complete all cases or use `default` for generating combinational circuit.
+
+ ---
+
+  :zap: Open the `partial_case_assign.v` file using text editor (For viewing the code not for simulation)-
+     
+   ```
+   $ gvim partial_case_assign.v 
+   ```
+   ![c_des_2](images/c_des_2.png)
+
+   :bulb: All cases are present but all variables are not assigned in all cases.
+   
+   :zap: Simulate `partial_case_assign.v`-
+
+   ```
+   $ iverilog partial_case_assign.v tb_partial_case_assign.v
+   $ ./a.out
+   $ gtkwave tb_partial_case_assign.vcd
+
+   ```
+
+   ![w_c2](images/w_c2.png)
+
+  :bulb:  `Inferred latch` behaviour is observed due to partial assignment.
+
+   :zap: Synthesize `partial_case_assign.v`-
+   
+   ```
+   $ yosys
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ read_verilog partial_case_assign.v
+   $ synth -top partial_case_assign
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ show
+   ```
+   ![s_c2](images/s_c2.png)
+
+  :bulb: Output is `latched` for `partial assignment issues`.
   
+  :warning: Same variables should be assigned in all cases.
+  
+  ---
+
+  :zap: Open the `bad_case.v` file using text editor (For viewing the code not for simulation)-
+     
+   ```
+   $ gvim bad_case.v 
+   ```
+   ![c_des_3](images/c_des_3.png)
+
+   :bulb: All cases are present but overlapping of cases occur due to ambiguous.
+   
+   :zap: Simulate `bad_case.v`-
+
+   ```
+   $ iverilog bad_case.v tb_bad_case.v
+   $ ./a.out
+   $ gtkwave tb_bad_case.vcd
+
+   ```
+
+   ![w_c3](images/w_c3.png)
+
+  :bulb:  Unintended situation occurs for ambiguous `cases`.
+
+   :zap: Synthesize `bad_case.v`-
+   
+   ```
+   $ yosys
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ read_verilog bad_case.v
+   $ synth -top bad_case
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ show
+   ```
+   ![s_c3](images/s_c3.png)
+
+  :bulb: Multiple cases can be evaluated, it is not like prioritize logic of `if` (only one condition evaluated for 'if').
+  
+  :warning: Overlapping cases should be avoided( as multiple cases are selected and unintended results are produced).
+  
+
    
    <div align="center">:star::star::star::star::star::star:</div> 
    
