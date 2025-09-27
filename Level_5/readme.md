@@ -2,10 +2,15 @@
 
 ## List of Objectives
 
- - :dart: <b>Practiccal Objective-1:</b> []()
-   - :microscope: <b>Lab-1:</b> []()
-   - :microscope: <b>Lab-2:</b>[]()
-     
+ - :dart: <b>Practiccal Objective-1:</b> [Labs on incomplete `if`, 'case' statement and overlapping `case`]()
+   - :microscope: <b>Lab-1:</b> [Incomplete `if` statement issue]()
+   - :microscope: <b>Lab-2:</b>[Incomplete `case` statement issue, partial assignment overlapping `case` ]()
+
+ - :dart: <b>Practiccal Objective-2:</b> [Labs on `for` loop and `for generate`]()
+   - :microscope: <b>Lab-3:</b> [Introduction to `for` loop]()
+   - :microscope: <b>Lab-4:</b>[Advantages of `for loop` over `case` statement]()
+   - :microscope: <b>Lab-4:</b>[Introduction to `for generate`]()
+        
  <div align="center">:star::star::star::star::star::star:</div> 
  
 ## :dart: Labs on incomplete `if`, 'case' statement and overlapping `case`
@@ -246,7 +251,7 @@
    <div align="center">:star::star::star::star::star::star:</div> 
 
 ## :dart: Labs on `for` loop and `for generate`
- ### :microscope: Lab-4: Introduction to `for` loop (Test design: `` )
+ ### :microscope: Lab-3: Introduction to `for` loop (Test design: `mux_generate.v` )
    :zap: Open the `mux_generate.v` file using text editor (For viewing the code not for simulation)-
      
    ```
@@ -273,7 +278,7 @@
   :bulb:  It functionally same as mux.
 
 
- ### :microscope: Lab-5: Advantages of `for loop` over `case` statement (Test design: `demux_generate.v` and `demux_case.v`)
+ ### :microscope: Lab-4: Advantages of `for loop` over `case` statement (Test design: `demux_generate.v` and `demux_case.v`)
 
    :zap: (Using `case`) Open the `demux_case.v` file using text editor (For viewing the code not for simulation)-
      
@@ -319,7 +324,7 @@
 
   :bulb: Use `for` loop over `case` to design large Demux.
 
-   ### :microscope: Lab-6: Introduction to `for generate`
+   ### :microscope: Lab-5: Introduction to `for generate`
 
    :bulb: Replicate hardware (submodule) instantiation into module inlarge design.
 
