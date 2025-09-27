@@ -104,7 +104,7 @@
   ![hier_synth_2](images/hier_synth_2.png)
 
   ```
-  $ write_verilog good_mux_netlist.v 
+  $ write_verilog multiple_modules_net.v 
   ```
 
    ![hier_net_v](images/hier_net_v.png)
@@ -117,41 +117,37 @@
   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   $ read_verilog multiple_modules.v
   $ synth -top multiple_modules
-  ```
-  ![flat_synth_1](images/flat_synth_1.png)
-  
-  ```
   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ flatten
   $ show
   ```
-  ![flat_synth_2](images/flat_synth_2.png)
+  ![flat_synth_1](images/flat_synth_1.png)
 
   ```
-  $ write_verilog good_mux_netlist.v 
+  $ write_verilog multiple_modules_flat.v 
   ```
 
    ![flat_net_v](images/flat_net_v.png)
    
  
-  ### :microscope: Lab-2: Observe Cell definition, parameters
-  :zap: Cell names can be seen using the following command-
+  ### :microscope: Lab-3: Compare hierarchical and flat synthesis
+  :zap: Hierarchial vs Flat netlist
    ```
-   /cell+ space key
-   :g//
+   $ gvim multiple_modules_hier.v
+   :vsp
+   :sp multiple_modules_flat.v
+   :exit
    ```
-   ![lib_cell](images/lib_cell.png)
+   ![comp_hier_flat](images/comp_hier_flat.png)
 
-  :zap: Now we can check any cell's line number and go to that cell definition-
-  ```
-  :
-  ```
-  ![lib_cell_1](images/lib_cell_1.png)
-  
-  :zap: Analyze the cell parameters-
-  
-   - There are different leakage power for different input combinations.
-   - Area,power,capacitance are also present in the definition.
-     
+  :bulb: Significance of flat synthesis-
+
+  - If a submodule is instantiated multiple times the multiple time synthesis of same submodule is problematic.
+  - We can synthesize submodule one time and use this multiple time.
+  - This is the significance of `synth -top`-
+    ```
+    synth -top `submodule_name`
+    ```
  ### :microscope: Lab-3: Compare area,power of variants of same cell
   :zap: We have opened three different flavours of same cell using line number-
   ```
