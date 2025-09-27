@@ -88,7 +88,7 @@
 ## :dart: Lab on Hierarchial vs Flatten synthesis
  ### :microscope: Lab-1: Hierarchial synthesis
    
-  :zap: Synthesize `multiple_modules.v`-
+  :zap: Synthesize `multiple_modules.v` as hierarchial-
      
    ```
   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -109,28 +109,30 @@
 
    ![hier_net_v](images/hier_net_v.png)
    
-   :zap: Go to the command line mode in gvim text editor by pressing `:` -
-
-   - Syntax off-
-   ```
-    :syn off
-   ```
-   - Line numbers-
-   ```
-    :se nu
-   ```
-   ![lib_vim_2](images/lib_vim_2.png)
+   ### :microscope: Lab-2: Flat synthesis
    
-   :zap: Significance of the filename-
+  :zap: Synthesize `multiple_modules.v` as flatten-
+     
+   ```
+  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ read_verilog multiple_modules.v
+  $ synth -top multiple_modules
+  ```
+  ![flat_synth_1](images/flat_synth_1.png)
+  
+  ```
+  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ show
+  ```
+  ![flat_synth_2](images/flat_synth_2.png)
 
-   - Based on process, voltage and temperature variation cell performance changes.
-   - The performance of cells in `.lib` file are generalized in certain values of these three parameters.
-   - We can observe the parameters in the name of `.lib` file.
-   -  For the `sky130_fd_sc_hd__tt_025C_1v80.lib` file-
-      - Process: `tt` (Typical pocess).
-      - Voltage: `1v80` (1.80 V).
-      - Temparature: `025C` (25 degree celcius).
+  ```
+  $ write_verilog good_mux_netlist.v 
+  ```
+
+   ![flat_net_v](images/flat_net_v.png)
    
+ 
   ### :microscope: Lab-2: Observe Cell definition, parameters
   :zap: Cell names can be seen using the following command-
    ```
