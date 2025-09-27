@@ -141,7 +141,7 @@
    ```
    ![gls_des_2](images/gls_des_2.png)
 
-   :bulb:
+   :bulb: We want a combinational circuit (3 input ,1 output) with one `or` and one `and` gate.
    
    :zap: Simulate `blocking_caveat.v`-
 
