@@ -251,6 +251,8 @@ $ show
 
 ![s_dff_ares_3](images/s_dff_ares_3.png)
 
+:bulb: In the library D flip-flops has `active low` reset, but we designed `active high` reset. So reset signal is passed through an inverter before connecting to the reset port of D flip-flop.
+
 ```
 $ write_verilog -noattr dff_asyncres_net.v
 $ !gvim dff_asyncres_net.v
