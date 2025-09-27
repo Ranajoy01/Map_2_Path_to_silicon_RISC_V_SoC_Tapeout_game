@@ -2,6 +2,7 @@
 
 ## List of Objectives
 
+ - :book: <b>Theoratical Objective-1:</b> [`If` and `case` hardware generation theoratical](#dart-labs-on-incomplete-if-case-statement-and-overlapping-case
  - :dart: <b>Practiccal Objective-1:</b> [Labs on incomplete `if`, 'case' statement and overlapping `case`](#dart-labs-on-incomplete-if-case-statement-and-overlapping-case
 )
    - :microscope: <b>Lab-1:</b> [Incomplete `if` statement issue](#microscope-lab-1incomplete-if-statement-issue
@@ -18,7 +19,43 @@
    - :microscope: <b>Lab-5:</b>[Introduction to `for generate`](#microscope-lab-5-introduction-to-for-generate)
         
  <div align="center">:star::star::star::star::star::star:</div> 
- 
+
+## :book: `If` and `case` hardware block generation theoratical
+
+:bulb: For the following `if` statement multiple 2:1 muxes are generated-
+
+```
+ if(a)
+   y=i0;
+ else if(b)
+   y=i1;
+ else
+   y=i2;
+
+```
+
+![if_synth](images/if_synth.png)
+
+---
+
+:bulb: For the following `case` statement one 4:1 mux is generated-
+
+```verilog
+ case(sel)
+  2'b00: y=i0;
+  2'b01: y=i1;
+  2'b10: y=i2;
+  2'b11: y=i3;
+ endcase
+
+```
+
+![case_synth](images/case_synth.png)
+
+
+
+<div align="center">:star::star::star::star::star::star:</div> 
+
 ## :dart: Labs on incomplete `if`, 'case' statement and overlapping `case`
  ### :microscope: Lab-1:Incomplete `if` statement issue
 
