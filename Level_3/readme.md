@@ -163,6 +163,10 @@
   ![w_dff_con_5](images/w_dff_con_5.png)
 
   :bulb: Output `q` is changing. It is not an example of sequential constant.
+
+  ### :microscope: Lab-3: Synthesize the designs `dff_cons*.v` and observe optimizations
+  
+  :zap:
  
   ### :microscope: Lab-6: Compare hierarchical and flat synthesis
   :zap: Hierarchial vs Flat netlist
