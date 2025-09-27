@@ -356,7 +356,7 @@
 
   :bulb:  8 full adder (`fa.v`) are instantiated to design ripple cary adder (`rca.v`).
 
-   :zap: Synthesize `rca.v` -
+   :zap: Synthesize `rca.v` and GLS verification -
    
    ```
    $ yosys
@@ -374,6 +374,23 @@
    ```
    ![s_g2](images/s_g2.png)
 
+   Generate netlist-
+   
+   ```
+    $ write_verilog rca_net.v
+   ```
+   GLS verification-
+
+   ```
+   $ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v rca_net.v tb_rca.v
+   $ ./a.out
+   $ gtkwave tb_rca.v
+   ```
+
+   ![w_g2](images/w_g2.png)
+   
+   :bulb: Here is no synthesis-simulation mismatch.
+   
    <div align="center">:star::star::star::star::star::star:</div> 
    
 ## :trophy: Level Status: 
