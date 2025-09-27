@@ -325,7 +325,7 @@ $ show
 
 ![mult_2_synt](images/mult_2_synt.png)
 
-:bulb: No harfware block generated
+:bulb: No hardware block generated
 
 :bulb: 3 bit number multipliesd with 2 results 4 bit number first three bits from MSB of result is same as 3 bit number and LSB is zero.
 
@@ -350,7 +350,7 @@ $ show
 
 ![mult_8_synt](images/mult_8_synt.png)
 
-:bulb: No harfware block generated.
+:bulb: No hardware block generated.
 
 :bulb: 3 bit number multipliesd with 9 results 6 bit number where the 3 bit number repeats two times.
 
