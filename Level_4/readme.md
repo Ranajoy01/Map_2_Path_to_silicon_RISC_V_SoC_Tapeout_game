@@ -126,8 +126,9 @@
    ![w2_bm](images/w2_bm.png)
 
    :x: Here is `Synthesis-simulation` mismatch.
+
+   :bulb: Due to `missing sensitivity list` issue in procedural block this occurs.
    
-     
   <div align="center">:star::star::star::star::star::star:</div> 
  
 ## :dart: Lab on Sequential logic optimization (`Sequential constant`)
