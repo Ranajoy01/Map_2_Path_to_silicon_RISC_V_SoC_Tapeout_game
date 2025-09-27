@@ -221,7 +221,7 @@
 
   ![s_dff_con_3](images/s_dff_con_3.png)
   
-  :bulb: Here an asynchronous reset D flip-flop is generated with input `d` always `1'b1'.
+  :bulb: Here one asynchronous reset D flip-flop and one asynchronous set D flip-flop are generated.
   
   :bulb: It is not an example of `sequential constant` optimization.
 
@@ -241,7 +241,6 @@
 
   ![s_dff_con_4](images/s_dff_con_4.png)
   
-  :bulb: Here an asynchronous reset D flip-flop is generated with input `d` always `1'b1'.
   
   :bulb: It is an example of `sequential constant` optimization.
 
@@ -261,7 +260,7 @@
 
   ![s_dff_con_5](images/s_dff_con_5.png)
   
-  :bulb: Here an asynchronous reset D flip-flop is generated with input `d` always `1'b1'.
+  :bulb: Here two asynchronous reset D flip-flop are generated with input `d` always `1'b1'.
   
   :bulb: It is not an example of `sequential constant` optimization.
 
