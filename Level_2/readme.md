@@ -62,8 +62,8 @@
   
   :zap: Analyze the cell parameters-
   
-     - There are different leakage power for different input combinations.
-     - Area,power,capacitance are also present in the definition.
+   - There are different leakage power for different input combinations.
+   - Area,power,capacitance are also present in the definition.
      
   ### :microscope: Lab-3: Compare area,power of variants of same cell
   :zap: We have opened three different flavours of same cell using line number-
