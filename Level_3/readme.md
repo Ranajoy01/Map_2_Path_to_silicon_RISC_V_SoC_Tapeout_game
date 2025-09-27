@@ -25,7 +25,7 @@
  <div align="center">:star::star::star::star::star::star:</div> 
  
 ## :dart: Lab on Combinational logic optimization
- ### :microscope: Lab-1: Observe and synthesize `opt*.v` files and observe optimization
+ ### :microscope: Lab-1: Observe and synthesize the combinational logic designs and observe optimization
    
    :zap: Open the `opt*.v` files using text editor-
      
@@ -93,7 +93,68 @@
    ![opt_4_synt](images/opt_4_synt.png)
 
    :bulb: The design is optimized to an `2 input xnor` gate and `b` input not used.
+
+---
+
+  :zap: Open the `multiple_module_opt.v` file using text editor-
+     
+   ```
+   $ gvim multiple_module_opt.v
+   ```
+   ![mm_opt_des_1](images/mm_opt_des_1.png)
+
    
+   :zap: Synthesize `multiple_module_opt.v` design-
+
+   ```
+   $ yosys
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ read_verilog multiple_module_opt.v
+   $ synth -top multiple_module_opt
+   $ flatten
+   $ opt
+   $ opt_reduce
+   $ opt_merge
+   $ opt_share
+   $ opt_clean -purge
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ show
+   ```
+   ![s_mm_opt_1](images/s_mm_opt_1.png)
+
+   :bulb: The design is optimized to an `a21o1` gate.
+
+---
+
+  :zap: Open the `multiple_module_opt2.v` file using text editor-
+     
+   ```
+   $ gvim multiple_module_opt2.v
+   ```
+   ![mm_opt_des_2](images/mm_opt_des_2.png)
+
+
+   
+   :zap: Synthesize `multiple_module_opt2.v` design-
+
+   ```
+   $ yosys
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ read_verilog multiple_module_opt2.v
+   $ synth -top multiple_module_opt2
+   $ flatten
+   $ opt
+   $ opt_reduce
+   $ opt_merge
+   $ opt_share
+   $ opt_clean -purge
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ show
+   ```
+   ![s_mm_opt_2](images/s_mm_opt_2.png)
+
+   :bulb: The design is optimized to ground `1'b0` connection to output.
+
    
      
   <div align="center">:star::star::star::star::star::star:</div> 
