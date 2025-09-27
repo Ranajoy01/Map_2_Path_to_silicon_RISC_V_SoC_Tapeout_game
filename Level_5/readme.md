@@ -244,6 +244,83 @@
 
    
    <div align="center">:star::star::star::star::star::star:</div> 
+
+## :dart: Labs on `for` loop and `for generate`
+ ### :microscope: Lab-4: Introduction to `for` loop (Test design: `` )
+   :zap: Open the `mux_generate.v` file using text editor (For viewing the code not for simulation)-
+     
+   ```
+   $ gvim mux_generate.v 
+   ```
+   ![f_des_1](images/f_des_1.png)
+
+   :bulb: It resides inside the `always` procedural block.
+
+   :bulb: It helps to efficiently write the code for large design with multiple instantiation of same block.
+   
+   
+   :zap: Simulate `mux_generate.v`-
+
+   ```
+   $ iverilog mux_generate.v tb_mux_generate.v
+   $ ./a.out
+   $ gtkwave tb_mux_generate.vcd
+
+   ```
+
+   ![w_f1](images/w_f1.png)
+
+  :bulb:  It functionally same as mux.
+
+
+ ### :microscope: Lab-4: Advantages of `for loop` over `case` statement (Test design: `demux_generate.v` and `demux_case.v`)
+
+   :zap: (Using `case`) Open the `demux_case.v` file using text editor (For viewing the code not for simulation)-
+     
+   ```
+   $ gvim demux_case.v 
+   ```
+   ![f_des_2](images/f_des_2.png)
+   
+   :zap: Simulate `demux_case.v`-
+
+   ```
+   $ iverilog demux_case.v tb_demux_case.v
+   $ ./a.out
+   $ gtkwave tb_demux_case.vcd
+
+   ```
+
+   ![w_f2](images/w_f2.png)
+
+  :bulb:  It is acting like a mux.
+
+  ---
+
+  :zap: (Using `for`) Open the `demux_generate.v` file using text editor (For viewing the code not for simulation)-
+     
+   ```
+   $ gvim demux_generate.v 
+   ```
+   ![f_des_3](images/f_des_3.png)
+   
+   :zap: Simulate `demux_generate.v`-
+
+   ```
+   $ iverilog demux_generate.v tb_demux_generate.v
+   $ ./a.out
+   $ gtkwave tb_demux_generate.vcd
+
+   ```
+
+   ![w_f3](images/w_f3.png)
+
+  :bulb:  It is acting like a mux.
+
+  :bulb: Use `for` loop over `case` to design large Demux.
+  
+
+   <div align="center">:star::star::star::star::star::star:</div> 
    
 ## :trophy: Level Status: 
 
