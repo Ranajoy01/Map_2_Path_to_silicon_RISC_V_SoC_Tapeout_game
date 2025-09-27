@@ -18,55 +18,55 @@
    ```
    ![if_des](images/if_des.png)
 
-   :bulb: Our aim is MUX, here one approach is shown using ternary operator.
+   :bulb: 
    
-   :zap: Simulate `ternary_operator_mux.v`-
+   :zap: Simulate `incomp_if.v`-
 
    ```
-   $ iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
+   $ iverilog incomp_if.v tb_incomp_if.v
    $ ./a.out
-   $ gtkwave tb_ternary_operator_mux.vcd
+   $ gtkwave tb_incomp_if.vcd
 
    ```
 
-   ![w1_te_mux](images/w1_te_mux.png)
+   ![w1_if1_1](images/w1_if1_1.png)
 
-   :bulb: Functional simulation shows that it is acting like a mux.
+  :bulb:  `Inferred latch` behaviour is observed due to incomplete `if` statement.
 
-   :zap: Synthesize `ternary_operator_mux.v` and generate netlist-
+   :zap: Synthesize `incomp_if.v` and generate netlist-
    
    ```
    $ yosys
    $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   $ read_verilog ternary_operator_mux.v
-   $ synth -top ternary_operator_mux
+   $ read_verilog incomp_if.v
+   $ synth -top incomp_if
    $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    $ show
    ```
-   ![s_te_mux](images/s_te_mux.png)
+   ![s_if1](images/s_if1.png)
 
    Generate netlist-
    
    ```
-   $ write_verilog -noattr ternary_operator_mux_net.v
+   $ write_verilog -noattr incomp_if_net.v
    ```
 
-   :bulb: It generated a `mux` cell.
+   :bulb: 
 
-   :zap: Gate level simulation of `ternary_operator_mux.v`
+   :zap: Gate level simulation of `incomp_if.v`
    
    
- Give the netlist `ternary_operator_mux_net.v` ,premitive ,standard cells and the testbench used for RTL design case `tb_ternary_operator_mux.v` to iverilog simulator-
+ Give the netlist `incomp_if_net.v` ,premitive ,standard cells and the testbench used for RTL design case `tb_incomp_if.v` to iverilog simulator-
     
    ```
-   $ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+   $ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v incomp_if_net.v tb_incomp_if.v
    $ ./a.out
-   $ gtkwave tb_ternary_operator_mux.vcd
+   $ gtkwave tb_incomp_if.vcd
 
    ```
-   ![w2_te_mux](images/w2_te_mux.png)
+   ![w2_if1_2](images/w2_if1_2.png)
 
-   :white_check_mark: Here is no `Synthesis-simulation` mismatch.
+   :x: Here is `Synthesis-simulation` mismatch due to incomplete `if`.
 
   ---
 
