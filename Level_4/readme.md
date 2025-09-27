@@ -3,8 +3,9 @@
 
 ## List of Objectives
 
- - :dart: <b>Practiccal Objective-1:</b> []()
-   - :microscope: <b>Lab-1:</b> []()
+ - :dart: <b>Practiccal Objective-1:</b> [Lab on GLS and `Synthesis-Simulation mismatch`]()
+   - :microscope: <b>Lab-1:</b> [`Missing sensitivity list issue` Functional simulation of RTL design and GLS simulation]()
+   - :microscope: <b>Lab-2:</b> [`Blocking statement issue` Functional simulation of RTL design and GLS simulation]()
      
  <div align="center">:star::star::star::star::star::star:</div> 
  
@@ -129,7 +130,7 @@
 
    :bulb: Due to `missing sensitivity list` issue in procedural block this occurs.
    
- ### :microscope: Lab-1:`Blocking statement issue issue` Functional simulation of RTL design and GLS simulation (Test design: `blocking_caveat.v`)
+ ### :microscope: Lab-2:`Blocking statement issue` Functional simulation of RTL design and GLS simulation (Test design: `blocking_caveat.v`)
    
    :zap: Open the `blocking_caveat.v` file using text editor (For viewing the code not for simulation)-
      
@@ -189,242 +190,15 @@
    :x: Here is no `Synthesis-simulation` mismatch.
    
    :bulb: This mismatch is caused by `blocking statement ordereing issue`.
-  
-   
-   
-  <div align="center">:star::star::star::star::star::star:</div> 
- 
-## :dart: Lab on Sequential logic optimization (`Sequential constant`)
- ### :microscope: Lab-2: Observe the designs `dff_cons*.v`
-   
-  :zap: Open the designs `dff_cons*.v` using text editor-
-  
-   ```
-   $ gvim dff_cons*.v
-   ```
-   ![opt_dff_des](images/opt_dff_des.png)
-   
-   :bulb: Here we have to find the `sequential constant` cases.
-   ### :microscope: Lab-3: Simulate the designs `dff_cons*.v`
-   
-  :zap: Simulate design `dff_const1.v` using iverilog-
-     
-   ```
-  $ iverilog dff_const1.v tb_dff_const1.v
-  $ ./a.out
-  $ gtkwave tb_dff_const1.vcd
-  ```
-  ![w_dff_con_1](images/w_dff_con_1.png)
 
-  :bulb: Output `q` is changing. It is not an example of sequential constant.
-
-  :zap: Simulate design `dff_const2.v` using iverilog-
-     
-   ```
-  $ iverilog dff_const2.v tb_dff_const2.v
-  $ ./a.out
-  $ gtkwave tb_dff_const2.vcd
-  ```
-  ![w_dff_con_2](images/w_dff_con_2.png)
-
-  :bulb: Output `q` is not changing. It is an example of sequential constant.
-
-  :zap: Simulate design `dff_const3.v` using iverilog-
-     
-   ```
-  $ iverilog dff_const3.v tb_dff_const3.v
-  $ ./a.out
-  $ gtkwave tb_dff_const3.vcd
-  ```
-  ![w_dff_con_3](images/w_dff_con_3.png)
-
-  :bulb: Output `q` is changing. It is not an example of sequential constant.
-
-  :zap: Simulate design `dff_const4.v` using iverilog-
-     
-   ```
-  $ iverilog dff_const4.v tb_dff_const4.v
-  $ ./a.out
-  $ gtkwave tb_dff_const4.vcd
-  ```
-  ![w_dff_con_4](images/w_dff_con_4.png)
-
-  :bulb: Output `q` is not changing. It is an example of sequential constant.
-
-  :zap: Simulate design `dff_const5.v` using iverilog-
-     
-   ```
-  $ iverilog dff_const5.v tb_dff_const5.v
-  $ ./a.out
-  $ gtkwave tb_dff_const5.vcd
-  ```
-  ![w_dff_con_5](images/w_dff_con_5.png)
-
-  :bulb: Output `q` is changing. It is not an example of sequential constant.
-
-  ### :microscope: Lab-4: Synthesize the designs `dff_cons*.v` and observe optimizations
-  
-  :zap: Synthesize the design `dff_cont1.v` using Yosys and SKY130 PDK-
-  
-  ```
-  $ yosys
-  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ read_verilog dff_const1.v
-  $ synth -top dff_const1
-  $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ show
-
-  ```
-
-  ![s_dff_con_1](images/s_dff_con_1.png)
-  
-  :bulb: Here an asynchronous reset D flip-flop is generated with input `d` always `1'b1'.
-  
-  :bulb: It is not an example of `sequential constant` optimization.
-
-  ---
-  :zap: Synthesize the design `dff_cont2.v` using Yosys and SKY130 PDK-
-  
-  ```
-  $ yosys
-  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ read_verilog dff_const2.v
-  $ synth -top dff_const2
-  $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ show
-
-  ```
-
-  ![s_dff_con_2](images/s_dff_con_2.png)
-  
-  :bulb: Here an asynchronous reset D flip-flop is generated with input `d` always `1'b0'.
-  
-  :bulb: It is an example of `sequential constant` optimization.
-
-  ---
-  :zap: Synthesize the design `dff_cont3.v` using Yosys and SKY130 PDK-
-  
-  ```
-  $ yosys
-  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ read_verilog dff_const3.v
-  $ synth -top dff_const3
-  $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ show
-
-  ```
-
-  ![s_dff_con_3](images/s_dff_con_3.png)
-  
-  :bulb: Here one asynchronous reset D flip-flop and one asynchronous set D flip-flop are generated.
-  
-  :bulb: It is not an example of `sequential constant` optimization.
-
-  ---
-  :zap: Synthesize the design `dff_cont4.v` using Yosys and SKY130 PDK-
-  
-  ```
-  $ yosys
-  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ read_verilog dff_const4.v
-  $ synth -top dff_const4
-  $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ show
-
-  ```
-
-  ![s_dff_con_4](images/s_dff_con_4.png)
-  
-  
-  :bulb: It is an example of `sequential constant` optimization.
-
-  ---
-  :zap: Synthesize the design `dff_cont5.v` using Yosys and SKY130 PDK-
-  
-  ```
-  $ yosys
-  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ read_verilog dff_const5.v
-  $ synth -top dff_const5
-  $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ show
-
-  ```
-
-  ![s_dff_con_5](images/s_dff_con_5.png)
-  
-  :bulb: Here two asynchronous reset D flip-flop are generated with input `d` always `1'b1'.
-  
-  :bulb: It is not an example of `sequential constant` optimization.
-
-  ---
-
- ## :dart: Lab on Sequential logic optimization (`Sequential unused output`)
- ### :microscope: Lab-5: Observe the designs `counter_opt*.v`
-   
-  :zap: Open the designs `dff_cons*.v` using text editor-
-  
-   ```
-   $ gvim counter_opt*.v
-   ```
-   ![seq_un_op_des](images/seq_un_op_des.png)
-   
-   :bulb: Here we have to find the `sequential unused output` cases.
- 
-  ### :microscope: Lab-6: Synthesize the designs `counter_opt*.v` and observe optimizations
-  
-  :zap: Synthesize the design `counter_opt.v` using Yosys and SKY130 PDK-
-  
-  ```
-  $ yosys
-  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ read_verilog counter_opt.v
-  $ synth -top counter_opt
-  $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ show
-
-  ```
-
-  ![seq_un_op_synt_1](images/seq_un_op_synt_1.png)
-  
-  :bulb: Here only one D flipflop generated for `LSB` bit of counter as other two bits of counter are not used for output.
-  
-  :bulb: It is an example of `sequential unused ouput` optimization.
-
-  ---
-:zap: Synthesize the design `counter_opt2.v` using Yosys and SKY130 PDK-
-  
-  ```
-  $ yosys
-  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ read_verilog counter_opt2.v
-  $ synth -top counter_opt2
-  $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-  $ show
-
-  ```
-
-  ![seq_un_op_synt_2](images/seq_un_op_synt_2.png)
-  
-  :bulb: Here three D flipflop generated for as three bits of counter are used for output.
-  
-  :bulb: It is not an example of `sequential unused ouput` optimization.
-
-  ---
+   :warning: Use blocking assignment statements cautiously.
  
    <div align="center">:star::star::star::star::star::star:</div> 
    
 ## :trophy: Level Status: 
 
 - All objectives completed.
-- I have learned about different combinational and sequential logic optimization during synthesis.
+- I have learned about Gate level simulation (GLS) and synthesis-simulation mismatch issues due to `missing sensitivity list` and `blocking statement ordering`.
 - 🔓 Next level unlocked 🔜 [Level-5(Day-5): Optimization in synthesis (If,case,for,generate useage in verilog)](../Level_5/readme.md).
 
 
