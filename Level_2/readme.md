@@ -3,14 +3,18 @@
 ## List of Objectives
 
 - :dart: <b>Practiccal Objective-1:</b> [Lab for introduction to timing.lib]()
-   - :microscope: <b>Lab-1:</b> [Clone SKY130 open source process design kit(PDK) on Ubuntu VM as test file library]()
-   - :microscope: <b>Lab-2:</b> [ Simulate a RTL design using iverilog]()
-   - :microscope: <b>Lab-3:</b> [ Read and edit (editing process only) verilog file using text editor]()
-- :dart: <b>Practical Objective-3:</b> [Labs on Hierarchial and Flat synthesis)
-    - :microscope: <b>Lab-4:</b> [Synthesize a design using Yosys and SKY130 PDK (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))]()     
-- :book: <b>Learning Objective-1:</b> [Various flip-flop coding practices]()
+   - :microscope: <b>Lab-1:</b> [Open the library file , significance of the filename.]()
+   - :microscope: <b>Lab-2:</b> [Observe Cell definition, parameters]()
+   - :microscope: <b>Lab-3:</b> [Compare area,power of variants of same cell]()
+- :dart: <b>Practical Objective-3:</b> [Labs on Hierarchial and Flat synthesis]()
+    - :microscope: <b>Lab-4:</b> [Hierarchial synthesis]()
+    - :microscope: <b>Lab-5:</b> [Flat synthesis]()
+    - :microscope: <b>Lab-6:</b> [Compare hierarchical and flat synthesis]()     
 - :dart: <b>Practical Objective-3:</b> [Labs on flip-flop design,simulation,synthesis and optimization]()
-    - :microscope: <b>Lab-5:</b> [Synthesize a design using Yosys and SKY130 PDK (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))]()
+    - :microscope: <b>Lab-7:</b> [Analyze different flip-flop designs ]()
+    - :microscope: <b>Lab-8:</b> [Simulate different flip-flop designs]()
+    - :microscope: <b>Lab-8:</b> [Synthesize different flip-flop designs]()
+    - :microscope: <b>Lab-8:</b> [Interesting synthesis optimization (No haedware block generate)]()
 
  <div align="center">:star::star::star::star::star::star:</div> 
  
@@ -86,7 +90,7 @@
   <div align="center">:star::star::star::star::star::star:</div> 
  
 ## :dart: Lab on Hierarchial vs Flatten synthesis
- ### :microscope: Lab-1: Hierarchial synthesis
+ ### :microscope: Lab-4: Hierarchial synthesis
    
   :zap: Synthesize `multiple_modules.v` as hierarchial-
      
@@ -109,7 +113,7 @@
 
    ![hier_net_v](images/hier_net_v.png)
    
-   ### :microscope: Lab-2: Flat synthesis
+   ### :microscope: Lab-5: Flat synthesis
    
   :zap: Synthesize `multiple_modules.v` as flatten-
      
@@ -130,7 +134,7 @@
    ![flat_net](images/flat_net.png)
    
  
-  ### :microscope: Lab-3: Compare hierarchical and flat synthesis
+  ### :microscope: Lab-6: Compare hierarchical and flat synthesis
   :zap: Hierarchial vs Flat netlist
    ```
    $ gvim multiple_modules_hier.v
@@ -149,29 +153,11 @@
     ```
     synth -top `submodule_name`
     ```
- ### :microscope: Lab-3: Compare area,power of variants of same cell
-  :zap: We have opened three different flavours of same cell using line number-
-  ```
-  :36663
-  :vsp
-  :vsp
-  :36904
-  :37145
-  ```
-  ![cell_comp](images/cell_comp.png)
-  
-   :zap: Compare three cells-
-
-   - `and2_0`,`and2_1`,`and2_2` cells are opened.
-   - Area is increasing from `and2_0` to`and2_2`.
-   - Speed is increasing from `and2_0` to `and2_2`.
-   - Power is increasing from `and2_0` to `and2_2`.
-  
 
  <div align="center">:star::star::star::star::star::star:</div>   
   
 ## :dart: Labs on flip-flop design,simulation,synthesis and optimization
- ### :microscope: Lab-4: Analyze different flip-flop designs 
+ ### :microscope: Lab-7: Analyze different flip-flop designs 
  
    :zap: Open different D flip-flop reset type designs -
    ```
@@ -201,7 +187,7 @@
    - For asynchronous reset `posedge reset` in sensitivity list also.
    - When asynchronous eset high then, output of D flip-flop is set to one immediately,no change on `clk` edge.
    - 
-### :microscope: Lab-5: Simulate different flip-flop designs 
+### :microscope: Lab-8: Simulate different flip-flop designs 
 :zap: Simulate `dff_asyncres.v` using iverilog-
 
 ```
@@ -229,7 +215,7 @@ $ gtkwave tb_dff_async_set.vcd
 ```
 ![w_dff_aset](images/w_dff_aset.png)
 
-### :microscope: Lab-6: Synthesize different flip-flop designs   
+### :microscope: Lab-9: Synthesize different flip-flop designs   
 :zap: Synthesize `dff_asyncres.v` using Yosys and SKY130 PDK-
 
 ```
@@ -303,7 +289,7 @@ $ !gvim dff_async_set_net.v
 
 ![s_dff_aset_2](images/s_dff_aset_2.png)
 
-### :microscope: Lab-7: Interesting synthesis optimization (No haedware block generate)
+### :microscope: Lab-10: Interesting synthesis optimization (No haedware block generate)
 :zap: `mult_2.v` design -
 
 ```
@@ -360,7 +346,7 @@ $ show
 ## :trophy: Level Status: 
 
 - All objectives completed.
-- I have learned simulation using iverilog,GTKWave (for timing diagram viewing) and synthesis using Yosys and SKY130 PDK.
-- 🔓 Next level unlocked 🔜 [Level-2(Day-2): Timing libraries,hierarchial vs flat synthesis, efficient flip-flop coding styles](../Level_3/readme.md).
+- I have learned about `.lib`, hierarchial vs flat synthesis , flop design, simulation, synthesis and some interseting optimization.
+- 🔓 Next level unlocked 🔜 [Level-3(Day-3): Combinational and sequential optimization](../Level_3/readme.md).
 
 
