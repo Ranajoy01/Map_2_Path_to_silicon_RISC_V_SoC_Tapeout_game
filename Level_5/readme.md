@@ -11,41 +11,41 @@
 ## :dart: Labs on incomplete `if`, 'case' statement and overlapping `case`
  ### :microscope: Lab-1:Incomplete `if` statement issue
    
-   :zap: Open the `incomp_if.v` file using text editor (For viewing the code not for simulation)-
+   :zap: Open the `incomp_case.v` file using text editor (For viewing the code not for simulation)-
      
    ```
-   $ gvim incomp_if.v 
+   $ gvim incomp_case.v 
    ```
-   ![if_des](images/if_des.png)
+   ![c_des1](images/c_des1.png)
 
-   :bulb: `Else` statement missing.
+   :bulb: All cases are not present.
    
-   :zap: Simulate `incomp_if.v`-
+   :zap: Simulate `incomp_case.v`-
 
    ```
-   $ iverilog incomp_if.v tb_incomp_if.v
+   $ iverilog incomp_case.v tb_incomp_case.v
    $ ./a.out
-   $ gtkwave tb_incomp_if.vcd
+   $ gtkwave tb_incomp_case.vcd
 
    ```
 
-   ![w_if1](images/w_if1.png)
+   ![w_c1](images/w_c1.png)
 
-  :bulb:  `Inferred latch` behaviour is observed due to incomplete `if` statement.
+  :bulb:  `Inferred latch` behaviour is observed due to incomplete `case` statement.
 
-   :zap: Synthesize `incomp_if.v`-
+   :zap: Synthesize `incomp_case.v`-
    
    ```
    $ yosys
    $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   $ read_verilog incomp_if.v
-   $ synth -top incomp_if
+   $ read_verilog incomp_case.v
+   $ synth -top incomp_case
    $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    $ show
    ```
-   ![s_if1](images/s_if1.png)
+   ![s_c1](images/s_c1.png)
 
-  :bulb: A `latch` is generated instead of a `mux`.
+  :bulb: Output is `latched` for unassigned `cases`.
    
   ---
 
