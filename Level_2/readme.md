@@ -82,8 +82,94 @@
    - Area is increasing from `and2_0` to`and2_2`.
    - Speed is increasing from `and2_0` to `and2_2`.
    - Power is increasing from `and2_0` to `and2_2`.
-  
+     
   <div align="center">:star::star::star::star::star::star:</div> 
+ 
+## :dart: Lab on Hierarchial vs Flatten synthesis
+ ### :microscope: Lab-1: Hierarchial synthesis
+   
+  :zap: Synthesize `multiple_modules.v`-
+     
+   ```
+  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ read_verilog multiple_modules.v
+  $ synth -top multiple_modules
+  ```
+  ![hier_synth_1](images/hier_synth_1.png)
+  
+  ```
+  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ show
+  ```
+  ![hier_synth_2](images/hier_synth_2.png)
+
+  ```
+  $ write_verilog good_mux_netlist.v 
+  ```
+
+   ![hier_net_v](images/hier_net_v.png)
+   
+   :zap: Go to the command line mode in gvim text editor by pressing `:` -
+
+   - Syntax off-
+   ```
+    :syn off
+   ```
+   - Line numbers-
+   ```
+    :se nu
+   ```
+   ![lib_vim_2](images/lib_vim_2.png)
+   
+   :zap: Significance of the filename-
+
+   - Based on process, voltage and temperature variation cell performance changes.
+   - The performance of cells in `.lib` file are generalized in certain values of these three parameters.
+   - We can observe the parameters in the name of `.lib` file.
+   -  For the `sky130_fd_sc_hd__tt_025C_1v80.lib` file-
+      - Process: `tt` (Typical pocess).
+      - Voltage: `1v80` (1.80 V).
+      - Temparature: `025C` (25 degree celcius).
+   
+  ### :microscope: Lab-2: Observe Cell definition, parameters
+  :zap: Cell names can be seen using the following command-
+   ```
+   /cell+ space key
+   :g//
+   ```
+   ![lib_cell](images/lib_cell.png)
+
+  :zap: Now we can check any cell's line number and go to that cell definition-
+  ```
+  :
+  ```
+  ![lib_cell_1](images/lib_cell_1.png)
+  
+  :zap: Analyze the cell parameters-
+  
+   - There are different leakage power for different input combinations.
+   - Area,power,capacitance are also present in the definition.
+     
+ ### :microscope: Lab-3: Compare area,power of variants of same cell
+  :zap: We have opened three different flavours of same cell using line number-
+  ```
+  :36663
+  :vsp
+  :vsp
+  :36904
+  :37145
+  ```
+  ![cell_comp](images/cell_comp.png)
+  
+   :zap: Compare three cells-
+
+   - `and2_0`,`and2_1`,`and2_2` cells are opened.
+   - Area is increasing from `and2_0` to`and2_2`.
+   - Speed is increasing from `and2_0` to `and2_2`.
+   - Power is increasing from `and2_0` to `and2_2`.
+  
+
+ <div align="center">:star::star::star::star::star::star:</div>   
  
 ## :book: Introduction to Yosys and Logic synthesis
 
