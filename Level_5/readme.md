@@ -2,14 +2,20 @@
 
 ## List of Objectives
 
- - :dart: <b>Practiccal Objective-1:</b> [Labs on incomplete `if`, 'case' statement and overlapping `case`]()
-   - :microscope: <b>Lab-1:</b> [Incomplete `if` statement issue]()
-   - :microscope: <b>Lab-2:</b>[Incomplete `case` statement issue, partial assignment overlapping `case` ]()
+ - :dart: <b>Practiccal Objective-1:</b> [Labs on incomplete `if`, 'case' statement and overlapping `case`](#dart-labs-on-incomplete-if-case-statement-and-overlapping-case
+)
+   - :microscope: <b>Lab-1:</b> [Incomplete `if` statement issue](#microscope-lab-1incomplete-if-statement-issue
+)
+   - :microscope: <b>Lab-2:</b>[Incomplete `case` statement issue, partial assignment overlapping `case` ](#microscope-lab-2incomplete-case-statement-issue-partial-assignment-overlapping-case
+)
 
- - :dart: <b>Practiccal Objective-2:</b> [Labs on `for` loop and `for generate`]()
-   - :microscope: <b>Lab-3:</b> [Introduction to `for` loop]()
-   - :microscope: <b>Lab-4:</b>[Advantages of `for loop` over `case` statement]()
-   - :microscope: <b>Lab-4:</b>[Introduction to `for generate`]()
+ - :dart: <b>Practiccal Objective-2:</b> [Labs on `for` loop and `for generate`](#dart-labs-on-for-loop-and-for-generate
+)
+   - :microscope: <b>Lab-3:</b> [Introduction to `for` loop](#microscope-lab-4-advantages-of-for-loop-over-case-statement-test-design-demux_generatev-and-demux_casev
+)
+   - :microscope: <b>Lab-4:</b>[Advantages of `for loop` over `case` statement](#microscope-lab-4-advantages-of-for-loop-over-case-statement-test-design-demux_generatev-and-demux_casev
+)
+   - :microscope: <b>Lab-4:</b>[Introduction to `for generate`](#microscope-lab-5-introduction-to-for-generate)
         
  <div align="center">:star::star::star::star::star::star:</div> 
  
