@@ -140,7 +140,7 @@
    ```
    ![comp_hier_flat](images/comp_hier_flat.png)
 
-  :bulb: Significance of synthesis-
+  :bulb: Significance of `synth -top`-
 
   - If a submodule is instantiated multiple times the multiple time synthesis of same submodule is problematic.
   - We can synthesize submodule one time and use this multiple time.
