@@ -169,87 +169,15 @@
   
 
  <div align="center">:star::star::star::star::star::star:</div>   
- 
-## :book: Introduction to Yosys and Logic synthesis
-
-### :bulb: Synthesizer
-   - RTL design to gate level design.
-   - RTL design is the behavoural representation of the required specification.
-   - Gate level design means representation of the required specification as the connection of logic gates.
-   - `Netlist` is the file which includes the required locgic gates and connections between gates after synthesizing.
-   - The tool used for synthesizing the RTL design is known as synthesizer.
-   - `Yosys` is an example of open source synthesizer.
   
----
-### :bulb: Yosys based synthesis flow
-   - Start yosys
-   - `.lib file` is given to yosys.
-   - `.v design file` is given to yosys
-   - Top module is synthesized as interconnection of logical block.
-   - Logical blocks/gates are translated to standard cells from process design kit (PDK) libray.
-   - Netlist is generated.
-   - The netlist is also simulated using iverilog with the `RTL design testbench` to prevent `synthesis-simulation mismatch`.
-
-   ![yosys_flow](images/yosys_flow.png)
-    
----
-### :bulb: `.lib` file
-   - `.lib` file is the collection of logical modules (blocks or gates).
-   - Logic gates like `and, or, not` and blocks like `mux, or_and_invert,D flip-flop` etc.
-   - There are different flavors of same gate `slow`, `medium`, `fast`.
-   - Here we are using `sky130_fd_sc_hd__tt_025C_1v80.lib` open source library.
----
-### :bulb: Reason for different flavours of gate
-
-   ![fast_cell](images/fast_slow_cell.png)
-
-- #### Why fast cell ?
-  - Combinational delay in logic path determines the maximum speed of digital logic circuit.
-    
-   ![fast_cell_1](images/fast_cell_1.png)
-  - We need faster cells to make T<sub>comb</sub> small and thus increase mcircuit speed.
-  - We can understand `setup time` with the train boarding analogy that we have to go to the station some time before the departure of the train.
-  - Setup time is the time duration before clock edge from which the data should be stable in D flip-flop data input port.
-  - Used for preventing Setup time violation and critical path issues.
-- #### Why slow cell ?
-  
-  - Reliable data flow (launch and capture) between flip-flops.
-    
-   ![slow_cell](images/slow_cell_1.png)
-  - We need faster cells to make T<sub>comb</sub> small and thus increase mcircuit speed.
-  - Suppose DFF-A launch data in a clk-edge and DFF-B receive that data in next clk-edge.
-  - DFF-B should not receive the new data of DFF-A in clk-edge-1.DFF-B should receive clk-edge-0 data of DFF-A in clk-edge-1.
-  - DFF-A propagation delay (T<sub>CQ_A</sub>) and T<sub>comb</sub> are used to slow the DFF-A new data to reach the DFF-B in same clock edge.
-  - Hold time is the time duration after clock edge till which the data should be stable in D flip-flop data input port.
-  - Used for preventing hold time violation.
-    
-  ![slow_cell_2](images/slow_cell_2.png)
----    
-### :bulb: Problems with fast cell and slow cell
-  - Capacitence is the load in digital circuit
-  - Faster charging or discharging of capacitance  means smaller the cell delay.
-  - For faster charging/discharging, we need transistors capable of sourcing more current (wide transistors).
-  - For the slower cells narrow transistors so power and are less.
-  - #### Fast cell problem
-    - Wide transistors
-    - More area, more power
-    - Hold time violation
-  - #### Slow cell problem
-    - Sluggish circuit
-    - More delay
-    - Setup time violation
-### :bulb: Selection of cells
-  - Guidance by the user in terms of `constraints` for selecting cells as per requirement.
- 
-<div align="center">:star::star::star::star::star::star:</div> 
- 
-## :dart: Lab using Yosys and SKY130 PDK 
- ### :microscope: Lab-4: Synthesize a design using Yosys and SKY130 PDK (Test design: 2:1 MUX (Verilog file named as "good_mux.v"))
+## :dart: Labs on flip-flop design,simulation,synthesis and optimization
+ ### :microscope: Lab-4: Analyze different flip-flop designs 
    
-   :zap: Go to verilog_files directory-
+   :zap: Open different D flip-flop reset type designs -
    ```
-   $ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
+   $ gvim dff*syn*s.v -o
    ```
+   ![dff_res](images/dff_res.png)
    :zap: Start yosys-
    ```
    $ yosys
