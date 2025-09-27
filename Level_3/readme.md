@@ -1,31 +1,24 @@
-# Level-2(Day-2): Timing libraries,hierarchial vs flat synthesis, efficient flip-flop coding styles
+# Level-3(Day-3): Combinational and sequential optimization
 
 ## List of Objectives
 
-- :dart: <b>Practiccal Objective-1:</b> [Lab for introduction to timing.lib](#dart-lab-for-introduction-to-timinglib
-)
-   - :microscope: <b>Lab-1:</b> [Open the library file , significance of the filename.](#microscope-lab-1-open-the-library-file--significance-of-the-filename
-)
-   - :microscope: <b>Lab-2:</b> [Observe Cell definition, parameters](#microscope-lab-2-observe-cell-definition-parameters
-)
-   - :microscope: <b>Lab-3:</b> [Compare area,power of variants of same cell](#microscope-lab-3-compare-areapower-of-variants-of-same-cell
-)
-- :dart: <b>Practical Objective-3:</b> [Labs on Hierarchial and Flat synthesis](#dart-lab-on-hierarchial-vs-flatten-synthesis
-)
-    - :microscope: <b>Lab-4:</b> [Hierarchial synthesis](#microscope-lab-4-hierarchial-synthesis
-)
-    - :microscope: <b>Lab-5:</b> [Flat synthesis](#microscope-lab-5-flat-synthesis
-)
-    - :microscope: <b>Lab-6:</b> [Compare hierarchical and flat synthesis](#microscope-lab-6-compare-hierarchical-and-flat-synthesis
-)     
-- :dart: <b>Practical Objective-3:</b> [Labs on flip-flop design,simulation,synthesis and optimization](#dart-labs-on-flip-flop-designsimulationsynthesis-and-optimization)
-    - :microscope: <b>Lab-7:</b> [Analyze different flip-flop designs ](#microscope-lab-7-analyze-different-flip-flop-designs
-)
-    - :microscope: <b>Lab-8:</b> [Simulate different flip-flop designs](#microscope-lab-8-simulate-different-flip-flop-designs
-)
-    - :microscope: <b>Lab-8:</b> [Synthesize different flip-flop designs](#microscope-lab-9-synthesize-different-flip-flop-designs
-)
-    - :microscope: <b>Lab-8:</b> [Interesting synthesis optimization (No haedware block generate)](#microscope-lab-10-interesting-synthesis-optimization-no-haedware-block-generate)
+- :dart: <b>Practiccal Objective-1:</b> []()
+   - :microscope: <b>Lab-1:</b> []()
+   - :microscope: <b>Lab-2:</b> []()
+   - :microscope: <b>Lab-3:</b> []()
+
+- :dart: <b>Practical Objective-3:</b> []()
+    - :microscope: <b>Lab-4:</b> []()
+
+    - :microscope: <b>Lab-5:</b> []()
+
+    - :microscope: <b>Lab-6:</b> []()
+ 
+- :dart: <b>Practical Objective-3:</b> []()
+    - :microscope: <b>Lab-7:</b> []()
+    - :microscope: <b>Lab-8:</b> []()
+    - :microscope: <b>Lab-8:</b> []()
+    - :microscope: <b>Lab-8:</b> []()
 
  <div align="center">:star::star::star::star::star::star:</div> 
  
@@ -358,7 +351,7 @@ $ show
 
 - All objectives completed.
 - I have learned about `.lib`, hierarchial vs flat synthesis , flop design, simulation, synthesis and some interseting optimization.
-- 🔓 Next level unlocked 🔜 [Level-3(Day-3): Combinational and sequential optimization](../Level_3/readme.md).
+- 🔓 Next level unlocked 🔜 [Level-3(Day-3): Combinational and sequential optimization](../Level_4/readme.md).
 
 
 
