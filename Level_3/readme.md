@@ -185,6 +185,7 @@
   
   :bulb: It is not an example of `sequential constant` optimization.
 
+  ---
   :zap: Synthesize the design `dff_cont2.v` using Yosys and SKY130 PDK-
   
   ```
@@ -204,6 +205,7 @@
   
   :bulb: It is an example of `sequential constant` optimization.
 
+  ---
   :zap: Synthesize the design `dff_cont3.v` using Yosys and SKY130 PDK-
   
   ```
@@ -223,6 +225,7 @@
   
   :bulb: It is not an example of `sequential constant` optimization.
 
+  ---
   :zap: Synthesize the design `dff_cont4.v` using Yosys and SKY130 PDK-
   
   ```
@@ -242,6 +245,7 @@
   
   :bulb: It is an example of `sequential constant` optimization.
 
+  ---
   :zap: Synthesize the design `dff_cont5.v` using Yosys and SKY130 PDK-
   
   ```
@@ -261,7 +265,7 @@
   
   :bulb: It is not an example of `sequential constant` optimization.
 
-
+  ---
  
   ### :microscope: Lab-6: Compare hierarchical and flat synthesis
   :zap: Hierarchial vs Flat netlist
