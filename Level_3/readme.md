@@ -31,18 +31,64 @@
    $ gvim opt*.v
    ```
    ![opt_des](images/opt_des.png)
-   
-   :zap: Go to the command line mode in gvim text editor by pressing `:` -
 
-   - Syntax off-
+   :bulb: Each design is written in the behavioural manner of mux.
+   
+   :zap: Synthesize `opt_check.v` design-
+
    ```
-    :syn off
+   $ yosys
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ read_verilog opt_check.v
+   $ synth -top opt_check
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ show
    ```
-   - Line numbers-
+   ![opt_1_synt](images/opt_1_synt.png)
+
+   :bulb: The design is optimized to an `and` gate.
+
+   :zap: Synthesize `opt_check2.v` design-
+
    ```
-    :se nu
+   $ yosys
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ read_verilog opt_check2.v
+   $ synth -top opt_check2
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ show
    ```
-   ![lib_vim_2](images/lib_vim_2.png)
+   ![opt_2_synt](images/opt_2_synt.png)
+
+   :bulb: The design is optimized to an `and` gate.
+
+   :zap: Synthesize `opt_check3.v` design-
+
+   ```
+   $ yosys
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ read_verilog opt_check3.v
+   $ synth -top opt_check3
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ show
+   ```
+   ![opt_3_synt](images/opt_3_synt.png)
+
+   :bulb: The design is optimized to an `and` gate.
+
+   :zap: Synthesize `opt_check4.v` design-
+
+   ```
+   $ yosys
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ read_verilog opt_check4.v
+   $ synth -top opt_check4
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ show
+   ```
+   ![opt_4_synt](images/opt_4_synt.png)
+
+   :bulb: The design is optimized to an `and` gate.
    
    :zap: Significance of the filename-
 
