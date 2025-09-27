@@ -273,7 +273,7 @@
   :bulb:  It functionally same as mux.
 
 
- ### :microscope: Lab-4: Advantages of `for loop` over `case` statement (Test design: `demux_generate.v` and `demux_case.v`)
+ ### :microscope: Lab-5: Advantages of `for loop` over `case` statement (Test design: `demux_generate.v` and `demux_case.v`)
 
    :zap: (Using `case`) Open the `demux_case.v` file using text editor (For viewing the code not for simulation)-
      
@@ -318,7 +318,32 @@
   :bulb:  It is acting like a demux.
 
   :bulb: Use `for` loop over `case` to design large Demux.
-  
+
+   ### :microscope: Lab-6: Introduction to `for generate`
+
+   :bulb: Replicate hardware (submodule) instantiation into module inlarge design.
+
+   :bulb: `for generate` is used outside the `always` procedural block.
+   
+   :zap: (Using `case`) Open the `rca.v` and `fa.v` files using text editor (For viewing the code not for simulation)-
+     
+   ```
+   $ gvim rca.v fa.v -O
+   ```
+   ![g_des_1](images/g_des_1.png)
+   
+   :zap: Simulate `rca.v`-
+
+   ```
+   $ iverilog rca.v fa.v tb_rca.v
+   $ ./a.out
+   $ gtkwave tb_rca.vcd
+
+   ```
+
+   ![w_g1](images/w_g1.png)
+
+  :bulb:  8 full adder (`fa.v`) are instantiated to design ripple cary adder (`rca.v`).
 
    <div align="center">:star::star::star::star::star::star:</div> 
    
