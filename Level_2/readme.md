@@ -172,61 +172,46 @@
   
 ## :dart: Labs on flip-flop design,simulation,synthesis and optimization
  ### :microscope: Lab-4: Analyze different flip-flop designs 
-   
+ 
    :zap: Open different D flip-flop reset type designs -
    ```
    $ gvim dff*syn*s.v -o
    ```
    ![dff_res](images/dff_res.png)
-   :zap: Start yosys-
-   ```
-   $ yosys
-   ```
-   ![yosys](images/yosys.png)
-
-   :zap: Give the `.lib` file to yosys for checking the availavle cells-
-   ```
-   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   ```
-   ![read_lib](images/read_lib.png)
    
-   :zap: Give the `.v` file `good_mux.v` to yosys for reading the design-
-   ```
-   $ read_verilog good_mux.v
-   ```
-   ![read_ver](images/read_ver.png)
-   
-   :zap: Specify the module `good_mux` which to be synthesized as root design-
-   ```
-   $ synth -top good_mux
-   ```
-   ![synth](images/synth.png)
-   
-   :zap: Generate the netlist for the design using the standard cell library-
-   ```
-   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-   ```
-   ![abc](images/abc.png)
+   :zap: Analysis of reset type flip-flop verilog code-
 
-   :zap: Visualize the synthesized design-
+   - D-flipflops ,so `posedge clk` in sensitivity list.
+   - When asynchronous reset high then, output of D flip-flop is set to zero immediately,no change on `clk` edge.
+   - When synchronous reset high then, output of D flip-flop is set to zero on next positive `clk` edge.
+   - For asynchronous reset `posedge reset` in sensitivity list also.
+   - For synchronous reset `posedge clk` in sensitivity list only.
+   - Non-blocking assignments are used inside `always` block.
+     
+  :zap: Open different D flip-flop reset type designs -
    ```
-   $ show
+   $ gvim dff_async_set.v
    ```
-   ![show](images/show.png)
-
-   :zap: Write the netlist as `.v` file `good_mux_net.v` with or without attribute (use only one)-
-   ```
-   $ write_verilog good_mux_net.v
-   $ write_verilog -noattr good_mux_net.v
-   ```
-   ![write_ver](images/write_ver.png)
+        
+   ![dff_set](images/dff_set.png)  
    
-   :zap: Read the netlist-
-   ```
-   $ !gvim good_mux_net.v
-   ```
-   ![net_vim](images/net_vim.png)
+   :zap: Analysis of reset type flip-flop verilog code-
 
+   - D-flipflops ,so `posedge clk` in sensitivity list.
+   - For asynchronous reset `posedge reset` in sensitivity list also.
+   - When asynchronous eset high then, output of D flip-flop is set to one immediately,no change on `clk` edge.
+   - 
+### :microscope: Lab-5: Simulate different flip-flop designs 
+:zap: Simulate `dff_asyncres.v` using iverilog-
+
+```
+$ iverilog dff_asyncres.v tb_dff_asyncres.v
+$ ./a.out
+$ gtkwave tb_dff_asyncres.vcd
+```
+1[w_dff_ares](images/w_dff_ares.png)
+
+### :microscope: Lab-6: Synthesize different flip-flop designs   
    <div align="center">:star::star::star::star::star::star:</div> 
    
 ## :trophy: Level Status: 
