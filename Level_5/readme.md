@@ -202,7 +202,7 @@
 
   :bulb:  Unintended situation occurs for ambiguous `cases`.
 
-   :zap: Synthesize `bad_case.v`-
+   :zap: Synthesize `bad_case.v` and generate netlist-
    
    ```
    $ yosys
@@ -214,9 +214,32 @@
    ```
    ![s_c3](images/s_c3.png)
 
-  :bulb: Multiple cases can be evaluated, it is not like prioritize logic of `if` (only one condition evaluated for 'if').
+   Generate netlist-
+   
+   ```
+   $ write_verilog -noattr bad_case_net.v
+   ```
+
+   :zap: Gate level simulation of `bad_case.v`
+   
+   
+ Give the netlist `bad_case.v` ,premitive ,standard cells and the testbench used for RTL design case `tb_bad_case.v` to iverilog simulator-
+    
+   ```
+   $ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_case_net.v tb_bad_case.v
+   $ ./a.out
+   $ gtkwave tb_bad_case.vcd
+
+   ```
+   ![w_c4](images/w_c4.png)
+
+   :x: Here is `Synthesis-simulation` mismatch.
+   
+   :bulb: This mismatch is caused by `overlapping case`.
+ 
+   :bulb: Multiple cases can be evaluated, it is not like prioritize logic of `if` (only one condition evaluated for 'if').
   
-  :warning: Overlapping cases should be avoided( as multiple cases are selected and unintended results are produced).
+   :warning: Overlapping cases should be avoided( as multiple cases are selected and unintended results are produced).
   
 
    
