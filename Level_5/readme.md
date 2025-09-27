@@ -18,7 +18,7 @@
    ```
    ![if_des](images/if_des.png)
 
-   :bulb: `Else` statemet missing.
+   :bulb: `Else` statement missing.
    
    :zap: Simulate `incomp_if.v`-
 
@@ -45,27 +45,8 @@
    ```
    ![s_if1](images/s_if1.png)
 
-   Generate netlist-
+  :bulb: A `latch` is generated instead of a `mux`.
    
-   ```
-   $ write_verilog -noattr incomp_if_net.v
-   ```
-
-   :zap: Gate level simulation of `incomp_if.v`
-   
-   
- Give the netlist `incomp_if_net.v` ,premitive ,standard cells and the testbench used for RTL design case `tb_incomp_if.v` to iverilog simulator-
-    
-   ```
-   $ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v incomp_if_net.v tb_incomp_if.v
-   $ ./a.out
-   $ gtkwave tb_incomp_if.vcd
-
-   ```
-   ![w2_if1_2](images/w2_if1_2.png)
-
-   :x: Here is `Synthesis-simulation` mismatch due to incomplete `if`.
-
   ---
 
   :zap: Open the `bad_mux.v` file using text editor (For viewing the code not for simulation)-
