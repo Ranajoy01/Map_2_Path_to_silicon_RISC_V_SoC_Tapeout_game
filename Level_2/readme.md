@@ -303,6 +303,25 @@ $ !gvim dff_async_set_net.v
 
 ![s_dff_aset_2](images/s_dff_aset.png)
 
+### :microscope: Lab-7: Interesting synthesis optimization (No haedware block generate)
+:zap: `mult_2.v` design -
+
+![mult_2_des](images/mult_2_des.png)
+
+:zap: Synthesize `mult_2.v` and observe the optimization-
+
+```
+$ yosys
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog mult_2.v
+$ synth -top mult_2
+$ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ show
+```
+
+![mult_2_synt](images/mult_2_synt.png)
+
+
 
    <div align="center">:star::star::star::star::star::star:</div> 
    
