@@ -39,7 +39,7 @@
    $ yosys
    $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    $ read_verilog ternary_operator_mux.v
-   $ synth -top ternary_operator_mux.v
+   $ synth -top ternary_operator_mux
    $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    $ show
    ```
@@ -67,6 +67,66 @@
    ![w2_te_mux](images/w2_te_mux.png)
 
    :white_check_mark: Here is no `Synthesis-simulation` mismatch.
+
+  ---
+
+  :zap: Open the `bad_mux.v` file using text editor (For viewing the code not for simulation)-
+     
+   ```
+   $ gvim bad_mux.v 
+   ```
+   ![gls_des_1](images/gls_des_1.png)
+
+   :bulb: Our aim is MUX, here one approach is shown using procedural block.
+   
+   :zap: Simulate `bad_mux.v`-
+
+   ```
+   $ iverilog bad_mux.v tb_bad_mux.v
+   $ ./a.out
+   $ gtkwave tb_bad_mux.vcd
+
+   ```
+
+   ![w1_bm](images/w1_bm.png)
+
+   :bulb: Functional simulation shows that it is not acting like a mux.
+
+   :zap: Synthesize `bad_mux.v` and generate netlist-
+   
+   ```
+   $ yosys
+   $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ read_verilog bad_mux.v
+   $ synth -top bad_mux
+   $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   $ show
+   ```
+   ![s_bm](images/s_bm.png)
+
+   Generate netlist-
+   
+   ```
+   $ write_verilog -noattr bad_mux_net.v
+   ```
+
+   :bulb: It is generated a `mux` cell.
+
+   :zap: Gate level simulation of `bad_mux.v`
+   
+   
+ Give the netlist `bad_mux_net.v` ,premitive ,standard cells and the testbench used for RTL design case `tb_bad_mux.v` to iverilog simulator-
+    
+   ```
+   $ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
+   $ ./a.out
+   $ gtkwave tb_bad_mux.vcd
+
+   ```
+   ![w2_bm](images/w2_bm.png)
+
+   :x: Here is `Synthesis-simulation` mismatch.
+   
      
   <div align="center">:star::star::star::star::star::star:</div> 
  
