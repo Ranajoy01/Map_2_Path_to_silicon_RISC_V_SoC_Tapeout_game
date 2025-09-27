@@ -96,7 +96,7 @@
      
   <div align="center">:star::star::star::star::star::star:</div> 
  
-## :dart: Lab on Sequential logic optimization
+## :dart: Lab on Sequential logic optimization (`Sequential constant`)
  ### :microscope: Lab-2: Observe the designs `dff_cons*.v`
    
   :zap: Open the designs `dff_cons*.v` using text editor-
@@ -263,6 +263,61 @@
   :bulb: Here two asynchronous reset D flip-flop are generated with input `d` always `1'b1'.
   
   :bulb: It is not an example of `sequential constant` optimization.
+
+  ---
+
+ ## :dart: Lab on Sequential logic optimization (`Sequential unused output`)
+ ### :microscope: Lab-5: Observe the designs `counter_opt*.v`
+   
+  :zap: Open the designs `dff_cons*.v` using text editor-
+  
+   ```
+   $ gvim counter_opt*.v
+   ```
+   ![seq_un_op_des](images/seq_un_op_des.png)
+   
+   :bulb: Here we have to find the `sequential unused output` cases.
+ 
+  ### :microscope: Lab-6: Synthesize the designs `counter_opt*.v` and observe optimizations
+  
+  :zap: Synthesize the design `counter_opt.v` using Yosys and SKY130 PDK-
+  
+  ```
+  $ yosys
+  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ read_verilog counter_opt.v
+  $ synth -top counter_opt
+  $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ show
+
+  ```
+
+  ![seq_un_op_synt_1](images/seq_un_op_synt_1.png)
+  
+  :bulb: Here only one D flipflop generated for `LSB` bit of counter as other two bits of counter are not used for output.
+  
+  :bulb: It is an example of `sequential unused ouput` optimization.
+
+  ---
+:zap: Synthesize the design `counter_opt2.v` using Yosys and SKY130 PDK-
+  
+  ```
+  $ yosys
+  $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ read_verilog counter_opt2.v
+  $ synth -top counter_opt2
+  $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ show
+
+  ```
+
+  ![seq_un_op_synt_2](images/seq_un_op_synt_2.png)
+  
+  :bulb: Here three D flipflop generated for as three bits of counter are used for output.
+  
+  :bulb: It is not an example of `sequential unused ouput` optimization.
 
   ---
  
