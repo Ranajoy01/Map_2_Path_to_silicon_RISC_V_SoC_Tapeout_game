@@ -61,6 +61,7 @@
   ![lib_cell_1](images/lib_cell_1.png)
   
   :zap: Analyze the cell parameters-
+  
      - There are different leakage power for different input combinations.
      - Area,power,capacitance are also present in the definition.
      
